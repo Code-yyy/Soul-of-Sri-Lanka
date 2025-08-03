@@ -1,0 +1,141 @@
+.h2{
+	color: #2F5341;
+}
+.card.mx-2 .card-body .btn.btn-primary {
+	background-color: #2F5341;
+}
+body {
+	background-color: #FDFDFD;
+}
+#main-navbar #navbarSupportedContent2 .navbar-nav.mr-auto {
+	color: #FDFDFD;
+}
+.container-fluid.px-1 .navbar.navbar-expand.navbar-light.bg-light {
+	color: #FDFDFD;
+}
+.container-fluid.px-1 {
+	background-color: #52876D;
+	color: #FDFDFD;
+}
+
+
+
+
+
+.card.mx-2 .card-body .card-title {
+	color: #2F5341;
+}
+.carousel-item.active .d-flex.justify-content-center .card.mx-2 {
+	background-color: transparent;
+}
+.d-flex.justify-content-center .card.mx-2 .card-body {
+	background-color: #F4F7F2;
+}
+body div h2 {
+	color: #2F5341;
+}
+
+.card.mx-2 .card-body .card-text {
+	color: #2F5341;
+}
+.container-fluid.px-1 .navbar.navbar-expand.navbar-light.bg-light {
+	background-color: #52876D;
+}
+.footer {
+	background-color: #52876D;
+}
+.row .col-lg-3.col-md-6.mb-4.mb-lg-0 h5 {
+	color: #F4F7F2;
+}
+.row .col-lg-3.col-md-6 .contact-info {
+	color: #fdfdfd;
+}
+.row .col-lg-3.col-md-6.mb-4.mb-md-0 h5 {
+	color: #F4F7F2;
+}
+.row .col-lg-3.col-md-6 h5 {
+	color: #F4F7F2;
+}
+.row .col-lg-3.col-md-6.mb-4.mb-lg-0 .list-unstyled {
+	color: #CFDED5;
+}
+.list-unstyled .mb-2 a {
+	color: #cfded5;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: #ddd;
+  color: black;
+  border-radius: 50%;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.circle:hover {
+  background-color: #bbb;
+  cursor: pointer;
+}
+
+.circle.active {
+  background-color: #7DA190; /* green highlight for current page */
+  color: white;
+}
+
+.row .col-12.text-center.copyright .mb-0 {
+	color: #fdfdfd;
+}
+.col-12.text-center.copyright .mb-0 a {
+	color: #fdfdfd;
+}
+.subscribe-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 300px;
+  margin: auto;
+}
+
+.subscribe-input {
+  padding: 15px 20px;
+  border: none;
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+}
+
+.subscribe-input::placeholder {
+  color: #e0e0e0;
+}
+
+.subscribe-button {
+  padding: 15px;
+  background-color: #92d7d4; /* cyan */
+  border: none;
+  border-radius: 999px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #001519;
+  transition: background-color 0.3s ease;
+}
+
+.subscribe-button:hover {
+  background-color: #7dc5c1;
+}
+

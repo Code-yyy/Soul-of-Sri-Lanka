@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover the rich traditions, grand festivals, and vibrant cultural heritage of Sri Lanka.">
+  <title>Festivals &amp; Culture | Visit Sri Lanka</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+	 <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+	  			
+	#main-navbar {
+    position: fixed;
+    top: 45px; /* adjust if your top navbar is taller or shorter */
+    width: 100%;
+    z-index: 1030;
+  }
+
+	.navbar {
+          background: rgba(255, 255, 255, 0.05); /* transparent white */
+          backdrop-filter: blur(8px); /* optional frosted effect */
+          z-index: 1000;
+          transition: background 0.3s;
+		  
+}
+	  .footer {
+            background-color:#3d6854;
+            color: white;
+            padding: 60px 0 30px;
+            font-size: 0.9rem;
+            margin: 0; /* Ensure no margin */
+        }
+        .footer h5 {
+            color: #4ecdc4;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .footer a:hover {
+            color: #4ecdc4;
+        }
+        .social-icon {
+            font-size: 1.2rem;
+            margin-right: 15px;
+        }
+        .newsletter-input {
+            background: rgba(255,255,255,0.1);
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 30px;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .newsletter-input::placeholder {
+            color: rgba(255,255,255,0.7);
+        }
+        .newsletter-btn {
+            background-color: #4ecdc4;
+            color: #073643;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            width: 100%;
+            transition: all 0.3s;
+        }
+        .newsletter-btn:hover {
+            background-color: #3dbeb5;
+        }
+        .contact-info {
+            margin-bottom: 15px;
+        }
+        .contact-info i {
+            color: #4ecdc4;
+            margin-right: 10px;
+            width: 20px;
+        }
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            margin-top: 40px;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.7);
+        }
+    /* Reset and base styles */
+    :root {
+      --primary: #8E2323;
+      --secondary: #044e1b;
+      --accent: #066b32;
+      --dark: #222;
+      --light:#e8f8f0;
+      --text: #333;
+      --text-light: #666;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--light);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+    }
+
+    /* Header section */
+    header {
+      position: relative;
+  height: auto;
+  color: #F4F7F2;
+  text-align: center;
+  padding: 120px 20px 80px;
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+    .video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+    .header-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .header-content {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    header h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+      line-height: 1.2;
+    }
+
+    .flag-text {
+      display: inline-block;
+    }
+
+    .flag-letter {
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+
+    .flag-letter:hover {
+      transform: translateY(-5px);
+    }
+
+    .color1 { color: #FFD700; }
+    .color2 { color: #FFFFFF; }
+    .color3 { color: #8E2323; }
+
+    header p {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin: 0 auto 30px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    }
+
+    
+    
+  .header-image {
+  width: 100px;        /* fixed width */
+  height: auto;        /* keep natural height proportion */
+  display: block;
+  margin: 30px auto 0;
+  border-radius: 0;    /* no rounding, square corners */
+  border: 4px solid var(--secondary);
+  box-shadow: 0 0 20px rgba(218, 165, 32, 0.6);
+  transition: transform 0.3s ease;
+}
+.header-sub-image {
+  max-width: 100%;       /* responsive width */
+  height: auto;          /* keep aspect ratio */
+  margin: 20px auto 0;   /* space above image */
+  display: block;
+  border-radius: 8px;    /* optional rounded corners */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+
+    
+
+    .header-image:hover {
+      transform: scale(1.05);
+    }
+
+    /* Section styling */
+    section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+      position: relative;
+    }
+
+    .section-title h2 {
+      font-size: 2.5rem;
+      color: var(--primary);
+      display: inline-block;
+      padding-bottom: 10px;
+    }
+
+    .section-title h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 3px;
+      background-color: var(--secondary);
+    }
+
+    .intro p {
+      font-size: 1.1rem;
+      color: var(--text);
+      margin-bottom: 20px;
+      text-align: justify;
+      line-height: 1.8;
+    }
+
+    .festivals-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .festival-card {
+      background-color: #CFDED5;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .festival-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px #2F5341(0,0,0,0.15);
+    }
+
+    .festival-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .festival-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .festival-content {
+      padding: 20px;
+    }
+
+    .festival-card h3 {
+      color: var(--primary);
+      margin-bottom: 10px;
+      font-size: 1.4rem;
+    }
+
+    .festival-card p {
+      color: var(--text-light);
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+    }
+
+    .festival-date {
+      display: inline-block;
+      background-color: var(--secondary);
+      color: white;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+
+    .culture-highlights {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .culture-item {
+      background-color: white;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+      border-left: 4px solid var(--accent);
+      display: flex;
+      align-items: center;
+    }
+
+    .culture-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      border-left: 4px solid var(--primary);
+    }
+
+    .culture-item i {
+      font-size: 1.5rem;
+      color: var(--accent);
+      margin-right: 15px;
+    }
+
+    .culture-item span {
+      font-weight: 500;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--dark);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      margin-top: 60px;
+    }
+
+    .footer-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    
+    
+    .copyright {
+      font-size: 0.9rem;
+      color: #aaa;
+      margin-top: 20px;
+    }
+
+    /* Back to top button */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: var(--primary);
+      color: #2F5341;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 99;
+    }
+
+    .back-to-top.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      background-color: var(--secondary);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .festival-card, .culture-item {
+      animation: fadeIn 0.5s ease forwards;
+      opacity: 0;
+    }
+
+    .festival-card:nth-child(1) { animation-delay: 0.1s; }
+    .festival-card:nth-child(2) { animation-delay: 0.2s; }
+    .festival-card:nth-child(3) { animation-delay: 0.3s; }
+    .festival-card:nth-child(4) { animation-delay: 0.4s; }
+    .festival-card:nth-child(5) { animation-delay: 0.5s; }
+    .festival-card:nth-child(6) { animation-delay: 0.6s; }
+    .festival-card:nth-child(7) { animation-delay: 0.7s; }
+    .festival-card:nth-child(8) { animation-delay: 0.8s; }
+
+    .culture-item:nth-child(1) { animation-delay: 0.1s; }
+    .culture-item:nth-child(2) { animation-delay: 0.2s; }
+    .culture-item:nth-child(3) { animation-delay: 0.3s; }
+    .culture-item:nth-child(4) { animation-delay: 0.4s; }
+    .culture-item:nth-child(5) { animation-delay: 0.5s; }
+
+    /* Responsive styles */
+    @media (max-width: 992px) {
+      header h1 {
+        font-size: 2.8rem;
+      }
+      
+      header p {
+        font-size: 1.1rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 80px 20px 60px;
+      }
+      
+      header h1 {
+        font-size: 2.2rem;
+      }
+      
+      .section-title h2 {
+        font-size: 2rem;
+      }
+      
+      .festivals-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 576px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      
+      .section-title h2 {
+        font-size: 1.6rem;
+      }
+      
+      .footer-links {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+	  #main-navbar .nav-link {
+        color: white ;
+         }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+		<div class="container-fluid px-1">
+  	    
+  <div class="container-fluid px-1">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top
+ "  style="
+    background-color: #3d6854;
+    padding-top: 4px; 
+    padding-bottom: 4px; 
+    font-size: 13px;
+    color: aliceblue
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-bottom: 1px solid #e8d9b5;">
+		
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+  	      <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+  	        <ul class="navbar-nav mr-auto">
+  	          <li class="nav-item active"> <a class="nav-link" href="#" style="color: aliceblue">&nbsp; Limited-time holiday packages across Sri Lanka - Plan your getaway now!&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="sr-only">(current)</span></a> </li>
+  	          <li class="nav-item active"> <a class="nav-link" href="Home.html" style="color: aliceblue" >&nbsp; &nbsp; &nbsp; Homepage <span class="sr-only">(current)</span></a></li>
+  	          <li class="nav-item"> <a class="nav-link" href="journals.html" style="color: aliceblue">Journal<br>
+  	          </a> </li>
+  	          <li class="nav-item"> <a class="nav-link" href="aboutus.html" style="color: aliceblue" >About Us<br>
+  	          </a></li>
+  	          <li class="nav-item"> <a class="nav-link" href="Contact us.html" style="color: aliceblue" >Contact<br>
+  	          </a></li>
+            </ul>
+  	        <form class="form-inline my-2 my-lg-0">
+            </form>
+          </div>
+    </nav>
+  <nav class="navbar navbar-expand-lg navbar-light bg-transparent position-absolute w-100" 
+     id="main-navbar"
+     style="z-index: 10; color: #92C1D6; top: 40px;">
+ <a class="navbar-brand" href="#"><img src="images/logo.jpg" alt="" width="47" height="44" class="img-fluid rounded-circle"/></a>
+  	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+  	      <div class="collapse navbar-collapse" id="navbarSupportedContent2">
+  	        <ul class="navbar-nav mr-auto">
+  	          <li class="nav-item active"> <a class="nav-link" href="Home.html">Home&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="sr-only">(current)</span></a> </li>
+  	          <li class="nav-item"> <a class="nav-link" href="#">Guest Houses&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>
+  	          </a> </li>
+  	          <li class="nav-item"> <a class="nav-link" href="Key Experience main.html">key experience&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</a></li>
+  	          <li class="nav-item"> <a class="nav-link" href="Destinations.html">Destinations&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>
+  	          </a></li>
+  	          <li class="nav-item"> <a class="nav-link" href="Festivals & Culture  .html">Festivals &amp; Culture&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>
+  	          </a></li>
+            </ul>
+  	        <form class="form-inline my-2 my-lg-0">
+            </form>
+          </div>
+    </nav>
+</div>
+  <header>
+    <video autoplay loop muted playsinline class="video-bg">
+  <source src="images\WhatsApp Video 2025-08-03 at 17.11.23_2de75965.mp4" type="video/mp4">
+</video>
+    <div class="header-overlay"></div>
+    <div class="header-content">
+      <h1>Festivals &amp; Culture of 
+        <span class="flag-text">
+          <span class="flag-letter color1">S</span>
+          <span class="flag-letter color2">r</span>
+          <span class="flag-letter color3">i</span>
+          <span class="flag-letter color1"> </span>
+          <span class="flag-letter color2">L</span>
+          <span class="flag-letter color3">a</span>
+          <span class="flag-letter color1">n</span>
+          <span class="flag-letter color2">k</span>
+          <span class="flag-letter color3">a</span>
+		</span>
+          
+      </h1>
+      <a href="https://www.gov.lk/" target="_blank" rel="noopener noreferrer">
+      <img src="images\Flag_of_Sri_Lanka.svg.png" alt="Sri Lanka Flag" class="header-image">
+      </a>
+      <p>Discover the rich traditions, grand festivals, and vibrant cultural heritage of Sri Lanka.</p>
+    </div>
+  </header>
+
+  <section class="intro">
+    <div class="section-title">
+      <h2>Cultural Tapestry of Sri Lanka</h2>
+    </div>
+    <p>Sri Lanka, the resplendent island nestled in the Indian Ocean, is a land where time-honored traditions and cultural celebrations flourish in vibrant harmony. Its festivals are not merely annual events; they are deeply rooted expressions of history, faith, gratitude, and community.</p>
+    
+    <p>With a diverse population comprising Buddhists, Hindus, Muslims, and Christians, Sri Lanka's cultural calendar is a beautiful tapestry of religious observances, seasonal rituals, and age-old customs that have been passed down through generations.</p>
+    
+    <p>Each celebration, whether it is a Buddhist poya day marked by silence and reflection or a Tamil harvest festival like Thai Pongal echoing joy and prosperity, carries stories of the island's spiritual and social evolution. The rhythms of the Magul Bera drums, the aroma of traditional sweets, and the flicker of oil lamps illuminate not just streets and temples, but the very spirit of the Sri Lankan people.</p>
+    
+    <p>Exploring Sri Lanka's festivals is like walking through a poetic journey where each step tells a story, each ritual shares a meaning, and each celebration connects the past with the present. Whether you are a traveler, a student, or a cultural enthusiast, the festivals of Sri Lanka offer a window into the soul of an island that celebrates life in all its color, faith, and festivity.</p>
+  </section>
+
+  <section class="festivals">
+    <div class="section-title">
+      <h2>Major Festivals</h2>
+    </div>
+    
+    <div class="festivals-container">
+      <div class="festival-card">
+        <img src="images\sinhala-avurud-traditional-games_01.jpg" alt="Sinhala Tamil New Year">
+        <div class="festival-content">
+          <h3>Sinhala &amp; Tamil New Year</h3>
+          <p>Celebrated in April, it marks the traditional New Year with rituals, games, food, and family gatherings.</p>
+          <span class="festival-date">Mid-April</span>
+        </div>
+      </div>
+
+      <div class="festival-card">
+        <img src="images\lanters.png" alt="Vesak Festival">
+        <div class="festival-content">
+          <h3>Vesak Festival</h3>
+          <p>Held in May, this Buddhist festival commemorates the birth, enlightenment, and death of Lord Buddha, with lanterns and decorations lighting up the island.</p>
+          <span class="festival-date">May (Full Moon)</span>
+        </div>
+      </div>
+
+      <div class="festival-card">
+        <img src="images\Kandy-Esala-Perahera.jpg" alt="Esala Perahera">
+        <div class="festival-content">
+          <h3>Esala Perahera</h3>
+          <p>One of Asia's grandest religious festivals, the Kandy Esala Perahera features majestic elephants, traditional dancers, and sacred relic processions.</p>
+          <span class="festival-date">July/August</span>
+        </div>
+      </div>
+
+      <div class="festival-card">
+        <img src="images\pPongal_festival_cele-3-1024x683.jpg" alt="Thai Pongal">
+        <div class="festival-content">
+          <h3>Pongal</h3>
+          <p>A Tamil harvest festival celebrated in January to thank the Sun God for a bountiful harvest. Homes are decorated, and sweet rice (Pongal) is cooked as an offering.</p>
+          <span class="festival-date">January 14-17</span>
+        </div>
+      </div>
+
+      <div class="festival-card">
+        <img src="images\16172941532_96dd848ae6_b.jpg" alt="Deepavali">
+        <div class="festival-content">
+          <h3>Deepavali</h3>
+          <p>Also known as the Festival of Lights, Deepavali is celebrated by Sri Lankan Hindus with oil lamps, colorful kolams, sweets, and prayers symbolizing the triumph of light over darkness.</p>
+          <span class="festival-date">October/November</span>
+        </div>
+      </div>
+
+      <div class="festival-card">
+        <img src="images\image_f0832c18ad.jpg" alt="Ramadan">
+        <div class="festival-content">
+          <h3>Ramadan &amp; Eid</h3>
+          <p>The Islamic holy month of fasting, prayer, and reflection, observed with dawn-to-dusk fasting and evening Iftar meals, culminating in Eid al-Fitr celebrations.</p>
+          <span class="festival-date">Variable (Lunar)</span>
+        </div>
+      </div>
+
+      <div class="festival-card">
+        <img src="images\202280-awsmbhozoq-1721647601.jpg" alt="Muharram">
+        <div class="festival-content">
+          <h3>Muharram</h3>
+          <p>The first month of the Islamic calendar, Muharram is observed with solemn processions and gatherings to commemorate the martyrdom of Imam Hussain.</p>
+          <span class="festival-date">Variable (Lunar)</span>
+        </div>
+      </div>
+
+      <div class="festival-card">
+        <img src="images\image_3ec5e171a7.jpg" alt="Christmas in Sri Lanka">
+        <div class="festival-content">
+          <h3>Christmas</h3>
+          <p>Celebrated by Christians across Sri Lanka, churches are lit up and homes decorated, especially in December.</p>
+          <span class="festival-date">December 25</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="culture">
+    <div class="section-title">
+      <h2>Cultural Highlights</h2>
+    </div>
+    
+    <div class="culture-highlights">
+      <div class="culture-item">
+        <i class="fas fa-music"></i>
+        <span>Traditional Kandyan &amp; Low Country Dances</span>
+      </div>
+      
+      <div class="culture-item">
+        <i class="fas fa-landmark"></i>
+        <span>Temple Murals, Stupas &amp; Ancient Architecture</span>
+      </div>
+      
+      <div class="culture-item">
+        <i class="fas fa-utensils"></i>
+        <span>Sri Lankan Traditional Foods like Kiribath &amp; Kottu</span>
+      </div>
+      
+      <div class="culture-item">
+        <i class="fas fa-tshirt"></i>
+        <span>Colorful Clothing: Kandyan Saree, Sarongs</span>
+      </div>
+      
+      <div class="culture-item">
+        <i class="fas fa-drum"></i>
+        <span>Folk Music, Drumming &amp; Local Arts</span>
+      </div>
+    </div>
+  </section>
+
+<footer class="footer" >
+    <div class="container">
+        <div class="row">
+            <!-- Social Media Column -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <h5>Follow Us</h5>
+                <p style="color: aliceblue">Get inspired by our travel photos and updates</p>
+                <div class="mb-3">
+                    <a href="https://instagram.com/SriLankaTravelExperts" target="_blank" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" target="_blank" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" target="_blank" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" target="_blank" class="social-icon">
+                        <i class="fab fa-pinterest-p"></i>
+                    </a>
+                </div>
+                <p style="color: aliceblue">@SoulOfLanka</p>
+            </div>
+            
+            <!-- About Us Column -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <h5>Quick Navigation Links</h5>
+                <ul class="list-unstyled" style="text-align: left;" >
+                    <li class="mb-2"><a href="aboutus.html">About Us</a></li>
+                    <li class="mb-2"><a href="Destinations.html">Destinations</a></li>
+                    <li class="mb-2"><a href="journals.html">Journal</a></li>
+                    <li class="mb-2"><a href="#">Guest houses</a></li>
+                    
+                </ul>
+            </div>
+            
+            <!-- Newsletter Column -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5>Get Updates</h5>
+                <p style="color: aliceblue">Subscribe to our newsletter for travel tips and special offers</p>
+                <form>
+                    <input type="email" class="newsletter-input mb-2" placeholder="Your Email Address">
+                    <button type="submit" class="newsletter-btn">SUBSCRIBE</button>
+                </form>
+            </div>
+            
+            <!-- Contact Column -->
+            <div class="col-lg-3 col-md-6">
+                <h5>Contact Us</h5>
+                <div class="contact-info">
+                    <i class="fas fa-phone-alt"></i> +94 76 883 0552
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-envelope"></i> info@souloflanka.com
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-map-marker-alt"></i> 123 Ocean Road, Colombo 03, Sri Lanka
+                </div>
+            </div>
+        </div>
+        
+        <!-- Copyright Row -->
+        <div class="row">
+            <div class="col-12 text-center copyright">
+                <p class="mb-0">© 2025 Soul of Lanka. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+                <p class="mb-0">Website by Team I | NSBM Web</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+  <div class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </div>
+
+  <script>
+    // Back to top button
+    const backToTopButton = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTopButton.classList.add('active');
+      } else {
+        backToTopButton.classList.remove('active');
+      }
+    });
+    
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    
+    // Animate flag letters on hover
+    const flagLetters = document.querySelectorAll('.flag-letter');
+    flagLetters.forEach(letter => {
+      letter.addEventListener('mouseover', () => {
+        letter.style.transform = 'translateY(-5px)';
+      });
+      letter.addEventListener('mouseout', () => {
+        letter.style.transform = 'translateY(0)';
+      });
+    });
+  </script>
+</div>
+</body>
+</html>

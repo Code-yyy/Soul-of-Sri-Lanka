@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Untitled Document</title>
+    <!-- Bootstrap -->
+	<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<style>
+		
+	#main-navbar {
+    position: fixed;
+    top: 45px; 
+    width: 100%;
+    z-index: 1030;
+  }
+
+	.navbar {
+          background: rgba(255, 255, 255, 0.05); /* transparent white */
+          backdrop-filter: blur(8px); /* optional frosted effect */
+          z-index: 1000;
+          transition: background 0.3s;
+		  
+}
+	.custom-container {
+          width: 95%;
+          max-width: none;
+          padding: 0 15px;
+}
+		  .image-container {
+				position: relative;
+				width: 100%;
+				max-width: 1500px;
+				margin: auto;
+			  }
+
+		  .image-container img {
+				width: 100%;
+				height: 700px;
+				object-fit: cover;
+			  }
+
+		  .overlay-heading {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				color: white;
+				font-size: 48px;
+				font-weight: bold;
+				text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+				text-align: center;
+				font-family: 'Arial', sans-serif;
+			  }
+		 .footer {
+            background-color:#3d6854;
+            color: white;
+            padding: 60px 0 30px;
+            font-size: 0.9rem;
+            margin: 0; /* Ensure no margin */
+        }
+        .footer h5 {
+            color: #4ecdc4;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .footer a:hover {
+            color: #4ecdc4;
+        }
+        .social-icon {
+            font-size: 1.2rem;
+            margin-right: 15px;
+        }
+        .newsletter-input {
+            background: rgba(255,255,255,0.1);
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 30px;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .newsletter-input::placeholder {
+            color: rgba(255,255,255,0.7);
+        }
+        .newsletter-btn {
+            background-color: #4ecdc4;
+            color: #073643;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            width: 100%;
+            transition: all 0.3s;
+        }
+        .newsletter-btn:hover {
+            background-color: #3dbeb5;
+        }
+        .contact-info {
+            margin-bottom: 15px;
+        }
+        .contact-info i {
+            color: #4ecdc4;
+            margin-right: 10px;
+            width: 20px;
+        }
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            margin-top: 40px;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        /* DEMO CONTENT - REMOVE IN PRODUCTION */
+        .demo-content {
+            min-height: 100vh;
+            background: #f8f9fa;
+            padding: 20px;
+        }
+    
+	  </style>
+  </head>
+  <body>
+  <div class="container-fluid px-1">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top
+ "  style="
+    background-color: #3d6854;
+    padding-top: 4px; 
+    padding-bottom: 4px; 
+    font-size: 13px;
+    color: aliceblue
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-bottom: 1px solid #e8d9b5;">
+		
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+  	      <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+  	        <ul class="navbar-nav mr-auto">
+  	          <li class="nav-item active"> <a class="nav-link" href="#" style="color: aliceblue">&nbsp; Limited-time holiday packages across Sri Lanka - Plan your getaway now!&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="sr-only">(current)</span></a> </li>
+  	          <li class="nav-item active"> <a class="nav-link" href="Home.html" style="color: aliceblue" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Homepage <span class="sr-only">(current)</span></a></li>
+  	          <li class="nav-item"> <a class="nav-link" href="journals.html" style="color: aliceblue">Journal<br>
+  	          </a> </li>
+  	          <li class="nav-item"> <a class="nav-link" href="aboutus.html" style="color: aliceblue" >About Us<br>
+  	          </a></li>
+  	          <li class="nav-item"> <a class="nav-link" href="Contact us.html" style="color: aliceblue" >Contact<br>
+  	          </a></li>
+            </ul>
+  	        <form class="form-inline my-2 my-lg-0">
+            </form>
+          </div>
+    </nav>
+  <nav class="navbar navbar-expand-lg navbar-light bg-transparent position-absolute w-100" 
+     id="main-navbar"
+     style="z-index: 10; color: #92C1D6; top: 40px;">
+ <a class="navbar-brand" href="#"><img src="images/logo.jpg" alt="" width="47" height="44" class="img-fluid rounded-circle"/></a>
+  	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+  	      <div class="collapse navbar-collapse" id="navbarSupportedContent2">
+  	        <ul class="navbar-nav mr-auto">
+  	          <li class="nav-item active"> <a class="nav-link" href="Home.html">Home&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="sr-only">(current)</span></a> </li>
+  	          <li class="nav-item"> <a class="nav-link" href="Soul of Lanka - Guest House 1.html">Guest Houses&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>
+  	          </a> </li>
+  	          <li class="nav-item"> <a class="nav-link" href="Key Experience main.html">Key Experiences&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</a></li>
+  	          <li class="nav-item"> <a class="nav-link" href="Destinations.html">Destinations&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>
+  	          </a></li>
+  	          <li class="nav-item"> <a class="nav-link" href="Festivals & Culture  .html">Festivals &amp; Culture&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>
+  	          </a></li>
+            </ul>
+  	        <form class="form-inline my-2 my-lg-0">
+            </form>
+          </div>
+    </nav>
+</div>
+ <div class="image-container">
+  <img src="images/beach.jpg" alt="Beach Holidays">
+  <div class="overlay-heading">Beach Holidays</div>
+</div>
+	  <section style="max-width: 1500px; margin: auto; background-color: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); font-family: Arial, sans-serif; color: #333;">
+  <h2 style="text-align: margin-bottom: 20px; color: #2c3e50;">Hikkaduwa</h2>
+  <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 30px; max-width: 1200px; margin: auto;">
+
+    <!-- Left: Image -->
+    <div style="flex: 1; min-width: 300px;">
+      <img src="images/h6.jpg" alt="Hikkaduwa Beach" style="width: 100%; height: auto; border-radius: 10px;">
+    </div>
+
+    <!-- Right: Text Content -->
+    <div style="flex: 2; min-width: 300px; font-size: 16px; line-height: 1.7; color: #444;">
+      <p style="font-weight: bold; margin-bottom: 10px;">• Key things to experience:</p>
+      <ul style="list-style-type: disc; padding-left: 40px; margin-bottom: 20px;">
+        <li>Water sports:
+          <ul style="list-style-type: circle; padding-left: 20px;">
+            <li>Surfing</li>
+            <li>Snorkeling</li>
+            <li>Scuba diving</li>
+          </ul>
+        </li>
+        <li>Explore the coral reefs and marine life, including colorful fish and sea turtles.</li>
+        <li>A lively nightlife scene, with numerous bars and restaurants along the beachfront.</li>
+        <li>Glass boat tours.</li>
+      </ul>
+
+      <p style="font-weight: bold;">• Best time to visit: <span style="font-weight: normal;">From October to April</span></p>
+    </div>
+
+  </div>
+</section>
+<p>&nbsp;</p>
+	   <section style="max-width: 1500px; margin: auto; background-color: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); font-family: Arial, sans-serif; color: #333;">
+  <h2 style="text-align: margin-bottom: 20px; color: #2c3e50;">Jungle Beach</h2>
+  <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 30px; max-width: 1200px; margin: auto;">
+
+    <!-- Left: Image -->
+    <div style="flex: 1; min-width: 300px;">
+      <img src="images/j2.jpg" alt="Jungle Beach" style="width: 100%; height: auto; border-radius: 10px;">
+    </div>
+
+    <!-- Right: Text Content -->
+    <div style="flex: 2; min-width: 300px; font-size: 16px; line-height: 1.7; color: #444;">
+      <p style="font-weight: bold; margin-bottom: 10px;">• Key things to experience:</p>
+      <ul style="list-style-type: disc; padding-left: 40px; margin-bottom: 20px;">
+        <li>Water sports:
+          <ul style="list-style-type: circle; padding-left: 20px;">
+            <li>Swimming</li>
+            <li>Snorkeling</li>
+          </ul>
+        </li>
+        <li>Enjoying the natural beauty.</li>
+        <li>Reaching the beach requires a bit of an adventure, often involving a walk through a jungle path or a short trek. 
+</li>
+        <li> Close to the Japanese Peace Pagoda and offers views of the surrounding jungle and coastline. 
+</li>
+      </ul>
+
+      <p style="font-weight: bold;">• Best time to visit: <span style="font-weight: normal;">From November to April</span></p>
+    </div>
+
+  </div>
+</section>
+<p>&nbsp;</p>
+	  <section style="max-width: 1500px; margin: auto; background-color: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); font-family: Arial, sans-serif; color: #333;">
+  <h2 style="text-align: margin-bottom: 20px; color: #2c3e50;">Thalpe Beach</h2>
+  <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 30px; max-width: 1200px; margin: auto;">
+
+    <!-- Left: Image -->
+    <div style="flex: 1; min-width: 300px;">
+      <img src="images/th1.jpg" alt="Thalpe Beach" style="width: 100%; height: auto; border-radius: 10px;">
+    </div>
+
+    <!-- Right: Text Content -->
+    <div style="flex: 2; min-width: 300px; font-size: 16px; line-height: 1.7; color: #444;">
+      <p style="font-weight: bold; margin-bottom: 10px;">• Key things to experience:</p>
+      <ul style="list-style-type: disc; padding-left: 40px; margin-bottom: 20px;">
+        <li>Water sports:
+          <ul style="list-style-type: circle; padding-left: 20px;">
+            <li>Swimming</li>
+          </ul>
+        </li>
+        <li>Enjoying the natural beauty.</li>
+        <li>Visit during low tide to experience the rock pools.</li>
+        <li>Watch Stilt Fishermen.Observe this traditional fishing technique practiced by locals, especially in the morning or late afternoon.
+</li>
+      </ul>
+
+      <p style="font-weight: bold;">• Best time to visit: <span style="font-weight: normal;">Early mornings from March to April</span></p>
+    </div>
+
+  </div>
+</section>
+<p>&nbsp;</p>
+	  <section style="max-width: 1500px; margin: auto; background-color: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); font-family: Arial, sans-serif; color: #333;">
+  <h2 style="text-align: margin-bottom: 20px; color: #2c3e50;">Nilaveli Beach</h2>
+  <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 30px; max-width: 1200px; margin: auto;">
+
+    <!-- Left: Image -->
+    <div style="flex: 1; min-width: 300px;">
+      <img src="images/n1.png" alt="Nilaveli Beach" style="width: 100%; height: auto; border-radius: 10px;">
+    </div>
+
+    <!-- Right: Text Content -->
+    <div style="flex: 2; min-width: 300px; font-size: 16px; line-height: 1.7; color: #444;">
+      <p style="font-weight: bold; margin-bottom: 10px;">• Key things to experience:</p>
+      <ul style="list-style-type: disc; padding-left: 40px; margin-bottom: 20px;">
+        <li>Water sports:
+          <ul style="list-style-type: circle; padding-left: 20px;">
+            <li>Swimming</li>
+            <li>Snorkeling</li>
+			<li>Diving</li>
+          </ul>
+        </li>
+        <li>Relax and sunbathe.</li>
+        <li>Visit Pigeon Island National Park. Take a boat trip to the marine park for snorkeling and diving </li>
+        <li> Enjoy the tranquility </li>
+      </ul>
+
+      <p style="font-weight: bold;">• Best time to visit: <span style="font-weight: normal;">From March to October</span></p>
+    </div>
+
+  </div>
+</section>
+<p>&nbsp;</p> 
+	 <section style="max-width: 1500px; margin: auto; background-color: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); font-family: Arial, sans-serif; color: #333;">
+  <h2 style="text-align: margin-bottom: 20px; color: #2c3e50;">Sea turtle hatchery Habaraduwa</h2>
+  <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 30px; max-width: 1200px; margin: auto;">
+
+    <!-- Left: Image -->
+    <div style="flex: 1; min-width: 300px;">
+      <img src="images/s1.jpg" alt="Sea turtle hatchery habaraduwa" style="width: 100%; height: auto; border-radius: 10px;">
+    </div>
+
+    <!-- Right: Text Content -->
+    <div style="flex: 2; min-width: 300px; font-size: 16px; line-height: 1.7; color: #444;">
+      <p style="font-weight: bold; margin-bottom: 10px;">• Key things to experience:</p>
+      <ul style="list-style-type: disc; padding-left: 40px; margin-bottom: 20px;">
+   
+        <li>The educational tours offered at the hatchery are the perfect opportunity to learn more about these amazing creatures. </li>
+        <li> If you show up by 6.00pm, you will get to see that magical moment when the baby turtles make their way home.</li>
+        <li> You will even get to release one of these hatchlings yourself. </li>
+      </ul>
+
+      <p style="font-weight: bold;">• Best time to visit: <span style="font-weight: normal;">All Days, From 7.30 A.M to 6.00 P.M</span></p>
+    </div>
+
+  </div>
+</section>  
+<p>&nbsp;</p>
+	   <section style="max-width: 1500px; margin: auto; background-color: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); font-family: Arial, sans-serif; color: #333;">
+  <h2 style="text-align: margin-bottom: 20px; color: #2c3e50;">Tips and Advice</h2>
+  <div style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 30px; max-width: 1200px; margin: auto;">
+
+    <!-- Left: Image -->
+    <div style="flex: 1; min-width: 300px;">
+      <img src="images/tips.jpg" alt="Tips and Advice" style="width: 100%; height: auto; border-radius: 10px;">
+    </div>
+
+    <!-- Right: Text Content -->
+    <div style="flex: 2; min-width: 300px; font-size: 16px; line-height: 1.7; color: #444;">
+      <p style="font-weight: bold; margin-bottom: 10px;">• Before you Travel:</p>
+      <ul style="list-style-type: disc; padding-left: 40px; margin-bottom: 20px;">
+   
+        <li>Sea urchins inhabit the areas around the rock pools, and their spines can inflict painful wounds. Make sure to wear protective shoes and tread carefully while exploring. </li>
+        <li> To have the best experience, visit the rock pools when the tide is low. </li>
+        <li> It's advisable to bring durable shoes for walking on the rocky surfaces and investigating the pools. </li>
+		<li>The beach has limited shelter, so make sure to pack sunscreen, hats, and sunglasses.</li>
+		<li>Many smaller businesses accept only cash, so bring enough local currency with you.  </li>
+		<li> Renting a scooter or hiring a tuk-tuk is a practical way to get around the area.  </li>
+      </ul>
+    </div>
+
+  </div>
+</section>  
+<p>&nbsp;</p>
+<section style="max-width: 1500px; margin: auto; background-color: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); font-family: Arial, sans-serif; color: #333;"> 
+	
+  <h2 style="text-align: margin-bottom: 20px; color: #2c3e50;">Travel Agencies</h2>
+  <p style="text-align: center; margin-bottom: 30px; color: #555;">
+	   Explore trusted travel agencies that offer unforgettable tours and experiences across Sri Lanka.
+  </p>
+
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+
+    <!-- Card 1 -->
+    <div style="width: 300px; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0 0 8px rgba(0,0,0,0.1); overflow: hidden; text-align: center;">
+      <img src="images/get you guide.png" alt="Lanka Safe Tours" style="width: 100%; height: 200px; object-fit: cover;">
+      <div style="padding: 15px;">
+        <h4 style="color: #2980b9;">Get You Guide&nbsp;</h4>
+        <p style="font-size: 14px; color: #555;">Discover the beauty of Sri Lanka with our carefully crafted tour packages.</p>
+        <a href="https://www.getyourguide.com/hikkaduwa-l32640/" target="_blank" style="color: #27ae60; font-weight: bold; text-decoration: none;">Hikkaduwa&nbsp;</a><br>
+		  
+		  <a href="https://www.getyourguide.com/sea-turtle-hatchery-habaraduwa-l237786/" target="_blank" style="color: #27ae60; font-weight: bold; text-decoration: none;">Habarduwa&nbsp;</a><br>
+		  
+		  <a href="https://www.getyourguide.com/nilaveli-beach-l229048/" target="_blank" style="color: #27ae60; font-weight: bold; text-decoration: none;">Nilaveli&nbsp;</a>
+      </div>
+    </div>
+	<div style="width: 300px; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0 0 8px rgba(0,0,0,0.1); overflow: hidden; text-align: center;">
+      <img src="images/sun diving.webp" alt="Walkers Tours" style="width: 100%; height: 200px; object-fit: cover;">
+      <div style="padding: 15px;">
+        <h4 style="color: #2980b9;">Sun Diving&nbsp;</h4>
+        <p style="font-size: 14px; color: #555;">A leading travel agency based in Sri Lanka</p>
+        <a href="https://sundivingsrilanka.com/boat-tour/" target="_blank" style="color: #27ae60; font-weight: bold; text-decoration: none;">Jungle Beach&nbsp;</a>
+      </div>
+    </div>
+	<div style="width: 300px; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0 0 8px rgba(0,0,0,0.1); overflow: hidden; text-align: center;">
+      <img src="images/t3.png" alt="Jetwing Travels" style="width: 100%; height: 200px; object-fit: cover;">
+      <div style="padding: 15px;">
+        <h4 style="color: #2980b9;">Jetwing Travels</h4>
+        <p style="font-size: 14px; color: #555;">Custom tours, eco-travel &amp; heritage trips</p>
+        <a href="https://jetwingtravels.com/?s=hikkaduwa" target="_blank" style="color: #27ae60; font-weight: bold; text-decoration: none;">Hikkaduwa&nbsp;</a>
+      </div>
+    </div>
+	<div style="width: 300px; background-color: #f9f9f9; border-radius: 10px; box-shadow: 0 0 8px rgba(0,0,0,0.1); overflow: hidden; text-align: center;">
+      <img src="images/a4.jpg" alt="Aitken Spence Travels" style="width: 100%; height: 200px; object-fit: cover;">
+      <div style="padding: 15px;">
+        <h4 style="color: #2980b9;">Aitken Spence Travels </h4>
+        <p style="font-size: 14px; color: #555;">An inspiring journey of discovery</p>
+        <a href="https://www.aitkenspencetravels.com/experience-sri-lanka/beaches-sunsets.html" target="_blank" style="color: #27ae60; font-weight: bold; text-decoration: none;">Beach Travels&nbsp;</a>
+      </div>
+    </div>
+   </div>
+ </section>
+  
+ <footer class="footer" >
+    <div class="container">
+        <div class="row">
+            <!-- Social Media Column -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <h5>Follow Us</h5>
+                <p style="color: aliceblue">Get inspired by our travel photos and updates</p>
+                <div class="mb-3">
+                    <a href="https://instagram.com/SriLankaTravelExperts" target="_blank" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" target="_blank" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" target="_blank" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" target="_blank" class="social-icon">
+                        <i class="fab fa-pinterest-p"></i>
+                    </a>
+                </div>
+                <p style="color: aliceblue">@SoulOfLanka</p>
+            </div>
+            
+            <!-- About Us Column -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <h5>Quick Navigation Links</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="aboutus.html">About Us</a></li>
+                    <li class="mb-2"><a href="Destinations.html">Destinations</a></li>
+                    <li class="mb-2"><a href="journals.html">Journal</a></li>
+                    <li class="mb-2"><a href="Soul of Lanka - Guest House 1.html">Guest Houses</a></li>
+                    
+                </ul>
+            </div>
+            
+            <!-- Newsletter Column -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5>Get Updates</h5>
+                <p style="color: aliceblue">Subscribe to our newsletter for travel tips and special offers</p>
+                <form>
+                    <input type="email" class="newsletter-input mb-2" placeholder="Your Email Address">
+                    <button type="submit" class="newsletter-btn">SUBSCRIBE</button>
+                </form>
+            </div>
+            
+            <!-- Contact Column -->
+            <div class="col-lg-3 col-md-6">
+                <h5>Contact Us</h5>
+                <div class="contact-info">
+                    <i class="fas fa-phone-alt"></i> +94 76 883 0552
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-envelope"></i> info@souloflanka.com
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-map-marker-alt"></i> 123 Ocean Road, Colombo 03, Sri Lanka
+                </div>
+            </div>
+        </div>
+        
+        <!-- Copyright Row -->
+        <div class="row">
+            <div class="col-12 text-center copyright">
+                <p class="mb-0">© 2025 Soul of Lanka. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+                <p class="mb-0">Website by Team I | NSBM Web</p>
+            </div>
+        </div>
+    </div>
+</footer>
+  	<!-- body code goes here -->
+
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+	<script src="js/jquery-3.4.1.min.js"></script>
+
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/popper.min.js"></script> 
+  <script src="js/bootstrap-4.4.1.js"></script>
+</body>
+</html>

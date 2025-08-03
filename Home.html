@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Untitled Document</title>
+    <!-- Bootstrap -->
+	<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<style>
+	.custom-container {
+          width: 95%;
+          max-width: none;
+          padding: 0 15px;
+}
+
+<!-- Navigation Bar styles -->
+		body{
+			background: #fdfcfc
+			
+			
+		}
+		  #main-navbar {
+    position: fixed;
+    top: 45px; /* adjust if your top navbar is taller or shorter */
+    width: 100%;
+    z-index: 1030;
+  }
+
+	.navbar {
+          background: rgba(255, 255, 255, 0.05); /* transparent white */
+          backdrop-filter: blur(8px); /* optional frosted effect */
+          z-index: 1000;
+          transition: background 0.3s;
+		  
+}
+		<!-- Navigation Bar styles END -->
+		
+ .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), 
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 12px 0;
+            text-align: center;
+        }
+        .hero-content {
+            background-color: rgba(255, 255, 255, 0.85);
+            color: #0e3f3e;
+            padding: 40px;
+            border-radius: 10px;
+            max-width: 800px;
+            margin: 0 auto;
+			font-weight: 500;
+        }
+        .btn-explore {
+            background-color: #235e3f;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-top: 20px;
+            border: none;
+            transition: all 0.3s;
+        }
+        .btn-explore:hover {
+            background-color: #5ba5b7;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+		.why-sri-lanka {
+            padding: 80px 0;
+			background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
+                url('https://images.unsplash.com/photo-1580910527739-556eb89f9d65?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+           background-size: cover;
+           background-position: center;
+           background-attachment: fixed; /* Creates parallax effect */
+
+        }
+.feature-card {
+    background: rgba(255, 255, 255, 0.92); /* More opaque cards for readability */
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    height: 100%;
+    transition: all 0.3s;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        .feature-icon {
+            font-size: 2.5rem;
+            color: #FF6B6B;
+            margin-bottom: 20px;
+        }
+		h1 {
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        .lead {
+            font-size: 1.25rem;
+        }
+        .packages-section {
+            background-color: #3d6854;
+            color: white;
+            padding: 80px 0;
+        }
+        .package-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            height: 100%;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .package-card:hover {
+            transform: translateY(-5px);
+            background-color: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .package-title {
+	font-size: 1.8rem;
+	margin-bottom: 20px;
+	font-weight: 700;
+	color: #c2dbe5;
+        }
+        .package-price {
+            font-size: 1.5rem;
+            color: #c2dbe5;
+            margin: 15px 0;
+        }
+        .btn-package {
+            background-color: #c2dbe5;
+            color: #073643;
+            border: none;
+            padding: 10px 25px;
+            font-weight: 600;
+            border-radius: 30px;
+            margin-right: 10px;
+            margin-top: 10px;
+            transition: all 0.3s;
+        }
+        .btn-package:hover {
+            background-color: #235e3f;
+            transform: translateY(-2px);
+        }
+        .btn-outline-package {
+            background-color: transparent;
+            color: #c2dbe5;
+            border: 2px solid #c2dbe5;
+            padding: 10px 25px;
+            font-weight: 600;
+            border-radius: 30px;
+            margin-top: 10px;
+            transition: all 0.3s;
+        }
+        .btn-outline-package:hover {
+            background-color: rgba(78, 205, 196, 0.1);
+        }
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            font-weight: 700;
+            text-align: center;
+        }
+        .divider {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin: 30px 0;
+        }
+		  .testimonials-section {
+            background-color: #f8f9fa;
+            padding: 80px 0;
+        }
+        .testimonial-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+            height: 100%;
+            position: relative;
+        }
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+			color: black
+        }
+        .testimonial-text:before {
+            content: "\201C";
+            font-size: 4rem;
+            color: rgba(7, 54, 67, 0.1);
+            position: absolute;
+            left: -15px;
+            top: -20px;
+            font-family: Georgia, serif;
+        }
+		.client-info {
+            display: flex;
+            align-items: center;
+        }
+        .client-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+            border: 3px solid #073643;
+        }
+        .client-name {
+            font-weight: 700;
+            margin-bottom: 0;
+            color: #073643;
+        }
+        .client-location {
+            color: #6c757d;
+            font-size: 0.9rem;
+        }
+		.rating {
+            color: #FFC107;
+            margin-bottom: 10px;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            font-weight: 700;
+            text-align: center;
+            color: whitesmoke;
+        }
+        .section-subtitle {
+            text-align: center;
+            margin-bottom: 50px;
+            color: #6c757d;
+        }
+		          body, html {
+            margin: 0;
+            padding: 0;
+        }
+        
+		
+        .footer {
+            background-color:#3d6854;
+            color: white;
+            padding: 60px 0 30px;
+            font-size: 0.9rem;
+            margin: 0; /* Ensure no margin */
+        }
+        .footer h5 {
+            color: #4ecdc4;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .footer a:hover {
+            color: #4ecdc4;
+        }
+        .social-icon {
+            font-size: 1.2rem;
+            margin-right: 15px;
+        }
+        .newsletter-input {
+            background: rgba(255,255,255,0.1);
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 30px;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .newsletter-input::placeholder {
+            color: rgba(255,255,255,0.7);
+        }
+        .newsletter-btn {
+            background-color: #4ecdc4;
+            color: #073643;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            width: 100%;
+            transition: all 0.3s;
+        }
+        .newsletter-btn:hover {
+            background-color: #3dbeb5;
+        }
+        .contact-info {
+            margin-bottom: 15px;
+        }
+        .contact-info i {
+            color: #4ecdc4;
+            margin-right: 10px;
+            width: 20px;
+        }
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            margin-top: 40px;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        /* DEMO CONTENT - REMOVE IN PRODUCTION */
+        .demo-content {
+            min-height: 100vh;
+            background: #f8f9fa;
+            padding: 20px;
+        }
+
+	</style>
+	<link href="css/newstyle.css" rel="stylesheet" type="text/css">
+	<link href="css/styles.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+	  
+<!-- Navigation Bars -->
+
+  <div class="container-fluid px-1">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top
+ "  style="
+    background-color: #3d6854;
+    padding-top: 4px; 
+    padding-bottom: 4px; 
+    font-size: 13px;
+    color: aliceblue
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-bottom: 1px solid #e8d9b5;">
+		
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+  	      <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+  	        <ul class="navbar-nav mr-auto">
+  	          <li class="nav-item active"> <a class="nav-link" href="#" style="color: aliceblue">&nbsp; Limited-time holiday packages across Sri Lanka - Plan your getaway now!&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="sr-only">(current)</span></a> </li>
+  	          <li class="nav-item active"> <a class="nav-link" href="Home.html" style="color: aliceblue" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Homepage <span class="sr-only">(current)</span></a></li>
+  	          <li class="nav-item"> <a class="nav-link" href="journals.html" style="color: aliceblue">Journal<br>
+  	          </a> </li>
+  	          <li class="nav-item"> <a class="nav-link" href="aboutus.html" style="color: aliceblue" >About Us<br>
+  	          </a></li>
+  	          <li class="nav-item"> <a class="nav-link" href="Contact us.html" style="color: aliceblue" >Contact<br>
+  	          </a></li>
+            </ul>
+  	        <form class="form-inline my-2 my-lg-0">
+            </form>
+          </div>
+    </nav>
+  <nav class="navbar navbar-expand-lg navbar-light bg-transparent position-absolute w-100" 
+     id="main-navbar"
+     style="z-index: 10; color: #92C1D6; top: 40px;">
+ <a class="navbar-brand" href="#"><img src="images/logo.jpg" alt="" width="47" height="44" class="img-fluid rounded-circle"/></a>
+  	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+  	      <div class="collapse navbar-collapse" id="navbarSupportedContent2">
+  	        <ul class="navbar-nav mr-auto">
+  	          <li class="nav-item active"> <a class="nav-link" href="Home.html">Home&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="sr-only">(current)</span></a> </li>
+  	          <li class="nav-item"> <a class="nav-link" href="Soul of Lanka - Guest House 1.html">Guest Houses&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>
+  	          </a> </li>
+  	          <li class="nav-item"> <a class="nav-link" href="Key Experience main.html">Key Experiences&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</a></li>
+  	          <li class="nav-item"> <a class="nav-link" href="Destinations.html">Destinations&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>
+  	          </a></li>
+  	          <li class="nav-item"> <a class="nav-link" href="Festivals & Culture  .html">Festivals &amp; Culture&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>
+  	          </a></li>
+            </ul>
+  	        <form class="form-inline my-2 my-lg-0">
+            </form>
+          </div>
+    </nav>
+  <img src="images/img11.png" alt="" width="1511.9" height="500" class="img-fluid"/>
+	  <br>
+	  <!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="hero-content">
+            <h1 class="display-4">Explore The Most Beautiful<br><span style="color: #165270;">Places In The Island</span></h1>
+            <p class="lead">Whether you're exploring your own city or an unfamiliar destination in any of the four corners in Sri Lanka, our list of the best places to explore will ignite a fire of curiosity, inspiration and motivation in you.</p>
+            <button class="btn btn-explore"><a href="Destinations.html">DISCOVER NOW</a></button>
+        </div>
+    </div>
+</section>
+	  
+	  <!-- Why Choose Sri Lanka Section -->
+<section class="why-sri-lanka">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2>Why Choose <span style="color: #235e3f;">Sri Lanka</span> As Your Next Destination?</h2>
+            <p class="lead">The Pearl of the Indian Ocean offers unforgettable experiences</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-umbrella-beach"></i>
+                    </div>
+                    <h3>Pristine Beaches</h3>
+                    <p>From the golden shores of Unawatuna to the surfing paradise of Arugam Bay, Sri Lanka boasts over 1,300 km of stunning coastline with beaches to suit every taste.</p>
+                </div>
+            </div>
+			 <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <h3>Lush Highlands</h3>
+                    <p>Escape to the cool misty hills of Nuwara Eliya, hike through tea plantations, and witness breathtaking waterfalls in Sri Lanka's beautiful central highlands.</p>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <h3>Rich Heritage</h3>
+                    <p>Explore 2,000 years of history at UNESCO World Heritage Sites like the ancient cities of Anuradhapura and Polonnaruwa, and the magnificent Sigiriya Rock Fortress.</p>
+                </div>
+            </div>
+			<div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-paw"></i>
+                    </div>
+                    <h3>Wildlife Safaris</h3>
+                    <p>Spot leopards in Yala, elephants in Minneriya, and blue whales off Mirissa. Sri Lanka has one of the highest rates of biological endemism in the world.</p>
+                </div>
+            </div>
+			<br>
+			<br>
+            
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Culinary Delights</h3>
+                    <p>Experience the vibrant flavors of Sri Lankan cuisine - from fiery curries to hoppers, kottu roti, and the world's finest cinnamon and tea.</p>
+                </div>
+            </div> <br> <br>
+			<div class="col-md-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Warm Hospitality</h3>
+                    <p>Known as the "Land of Smiles," Sri Lankans are famously friendly and welcoming, ensuring your visit will be filled with genuine warmth and care.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-5">
+            <button class="btn btn-explore btn-lg"><a href="Key Experience main.html">EXPLORE SRI LANKA TOURS</a></button>
+        </div>
+    </div>
+</section>
+	  <!-- Travel Packages Section -->
+<section class="packages-section">
+    <div class="container">
+        <h2 class="section-title" style="color: #c2dbe5">Explore Our Travel Packages</h2>
+        
+        <div class="row">
+            <!-- Domestic Package -->
+            <div class="col-md-6">
+                <div class="package-card">
+                    <h3 class="package-title">SRI LANKA DISCOVERY</h3>
+                    <p style="color: #c2dbe5">Experience the best of Sri Lanka with our comprehensive domestic travel package covering cultural, wildlife, and beach destinations.</p>
+                    <div class="divider"></div>
+                    <ul style="color: #c2dbe5">
+                        <li>7 nights in 4-star hotels</li>
+                        <li>All transportation included</li>
+                        <li>Daily breakfast and 5 dinners</li>
+                        <li>Guided tours to Sigiriya, Kandy, and Galle</li>
+                        <li>Yala National Park safari</li>
+                    </ul>
+                    <div class="package-price">Starting at LKR 92,000/person</div>
+                    <button class="btn btn-package">BOOK NOW</button>
+                    <button class="btn btn-outline-package">LEARN MORE</button>
+                </div>
+            </div>
+			
+			 <!-- International Package -->
+            <div class="col-md-6">
+                <div class="package-card">
+                    <h3 class="package-title">ASIAN ADVENTURE</h3>
+                    <p style="color: #c2dbe5">Combine Sri Lanka with other Asian destinations for the ultimate travel experience across multiple countries.</p>
+                    <div class="divider"></div>
+                    <ul style="color:#c2dbe5">
+                        <li>14 nights across Sri Lanka, Maldives, and India</li>
+                        <li>International flights included</li>
+                        <li>All transfers and domestic flights</li>
+                        <li>Mix of cultural, beach, and urban experiences</li>
+                        <li>Optional extensions available</li>
+                    </ul>
+                    <div class="package-price">Starting at LKR 150,000/person</div>
+                    <button class="btn btn-package">BOOK NOW</button>
+                    <button class="btn btn-outline-package">LEARN MORE</button>
+                </div>
+            </div>
+			</div>
+		</div>
+	</section>
+	
+    <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel" style="background-color: #3c6753">
+	    <ol class="carousel-indicators">
+	      <li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active"></li>
+	      <li data-target="#carouselExampleIndicators1" data-slide-to="1"></li>
+	      <li data-target="#carouselExampleIndicators1" data-slide-to="2"></li>
+      </ol>
+	    <div class="carousel-inner" role="listbox">
+	      <div class="carousel-item active"> <img class="d-block mx-auto img-fluid rounded" src="images/m2.png" height="1000px" width="700px" alt="First slide">
+	        <div class="carousel-caption">
+	          
+            </div>
+          </div>
+	      <div class="carousel-item"> <img class="d-block mx-auto img-fluid rounded" src="images/banner2.png" alt="Second slide" height="1000px" width="700px">
+	        <div class="carousel-caption">
+	          
+            </div>
+          </div>
+	      <div class="carousel-item"> <img class="d-block mx-auto img-fluid rounded" src="images/img11.png"  alt="Third slide">
+	        <div class="carousel-caption">
+            </div>
+          </div>
+      </div>
+	    <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="carousel-control-next" href="#carouselExampleIndicators1" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a> </div>
+<br>
+			
+          
+<section class="py-5 bg-light text-center">
+	<div class="container" style="background: #FFFFFF">
+  <h3 class="mb-4" style="color: black">Trusted By</h3>
+  <div id="partnersCarousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="d-flex justify-content-center gap-5">
+          <img src="images/partner1.png" class="img-fluid mx-3" style="height: 60px;" alt="Partner 1">
+          <img src="images/partner2.png" class="img-fluid mx-3" style="height: 60px;" alt="Partner 2">
+          <img src="images/partner3.png" class="img-fluid mx-3" style="height: 60px;" alt="Partner 3">
+		  <img src="images/partner4.png" class="img-fluid mx-3" style="height: 60px;" alt="Partner 6">
+		  <img src="images/partner5.png" class="img-fluid mx-3" style="height: 60px;" alt="Partner 6">
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="d-flex justify-content-center gap-5">
+          <img src="images/partner1.png" class="img-fluid mx-3" style="height: 60px;" alt="Partner 4">
+          <img src="images/partner2.png" class="img-fluid mx-3" style="height: 60px;" alt="Partner 5">
+          <img src="images/partner3.png" class="img-fluid mx-3" style="height: 60px;" alt="Partner 6">
+		  <img src="images/partner4.png" class="img-fluid mx-3" style="height: 60px;" alt="Partner 6">
+		  <img src="images/partner5.png" class="img-fluid mx-3" style="height: 60px;" alt="Partner 6">
+        </div>
+      </div>
+    </div>
+    <!-- Optional controls -->
+    <a class="carousel-control-prev" href="#partnersCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </a>
+    <a class="carousel-control-next" href="#partnersCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </a>
+  </div>
+		</div>
+	 
+</section>
+	  
+	  
+		<!-- Testimonials Section -->
+<section class="testimonials-section">
+    <div class="container">
+        <h2 class="section-title" style="color: black">What Our Travelers Say</h2>
+        <p class="section-subtitle">Hear from people who've experienced our tours firsthand</p>
+        <div class="row">
+            <!-- Testimonial 1 -->
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">Our Sri Lanka tour was absolutely breathtaking! From the ancient cities to the beautiful beaches, every moment was perfectly planned. The guides were knowledgeable and made us feel like family.</p>
+                    <div class="client-info">
+                        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sarah J." class="client-img">
+						 <div>
+                            <h5 class="client-name">Sarah J.</h5>
+                            <p class="client-location">London, UK</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Testimonial 2 -->
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+					 <p class="testimonial-text">The wildlife safari in Yala National Park was the highlight of our trip. We saw leopards, elephants, and so much more. The accommodations were luxurious and the food was incredible!</p>
+                    <div class="client-info">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael T." class="client-img">
+                        <div>
+                            <h5 class="client-name">Michael T.</h5>
+                            <p class="client-location">Toronto, Canada</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			 <!-- Testimonial 3 -->
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimonial-text">As a solo female traveler, I felt completely safe and cared for throughout my journey. The team went above and beyond to customize my itinerary and make it a trip of a lifetime.</p>
+                    <div class="client-info">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Priya K." class="client-img">
+						<div>
+                            <h5 class="client-name">Priya K.</h5>
+                            <p class="client-location">Sydney, Australia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		</div>
+	</section>
+
+<!-- Fixed Footer with No Empty Space -->
+<footer class="footer" >
+    <div class="container">
+        <div class="row">
+            <!-- Social Media Column -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <h5>Follow Us</h5>
+                <p style="color: aliceblue">Get inspired by our travel photos and updates</p>
+                <div class="mb-3">
+                    <a href="https://instagram.com/SriLankaTravelExperts" target="_blank" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" target="_blank" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" target="_blank" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" target="_blank" class="social-icon">
+                        <i class="fab fa-pinterest-p"></i>
+                    </a>
+                </div>
+                <p style="color: aliceblue">@SoulOfLanka</p>
+            </div>
+            
+            <!-- About Us Column -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <h5>Quick Navigation Links</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="aboutus.html">About Us</a></li>
+                    <li class="mb-2"><a href="Destinations.html">Destinations</a></li>
+                    <li class="mb-2"><a href="journals.html">Journal</a></li>
+                    <li class="mb-2"><a href="Soul of Lanka - Guest House 1.html">Guest Houses</a></li>
+                    
+                </ul>
+            </div>
+            
+            <!-- Newsletter Column -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5>Get Updates</h5>
+                <p style="color: aliceblue">Subscribe to our newsletter for travel tips and special offers</p>
+                <form>
+                    <input type="email" class="newsletter-input mb-2" placeholder="Your Email Address">
+                    <button type="submit" class="newsletter-btn">SUBSCRIBE</button>
+                </form>
+            </div>
+            
+            <!-- Contact Column -->
+            <div class="col-lg-3 col-md-6">
+                <h5>Contact Us</h5>
+                <div class="contact-info">
+                    <i class="fas fa-phone-alt"></i> +94 76 883 0552
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-envelope"></i> info@souloflanka.com
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-map-marker-alt"></i> 123 Ocean Road, Colombo 03, Sri Lanka
+                </div>
+            </div>
+        </div>
+        
+        <!-- Copyright Row -->
+        <div class="row">
+            <div class="col-12 text-center copyright">
+                <p class="mb-0">© 2025 Soul of Lanka. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+                <p class="mb-0">Website by Team I | NSBM Web</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+											
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+	<script src="js/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/popper.min.js"></script> 
+  <script src="js/bootstrap-4.4.1.js"></script>
+</div>
+</body>
+</html>

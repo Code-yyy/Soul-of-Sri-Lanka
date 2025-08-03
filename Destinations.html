@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Destination</title>
+    <!-- Bootstrap -->
+	<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<style>
+ 	.carousel-caption.top-caption {
+			  top: 50%;
+			  bottom: auto;
+			  transform: translateY(0); 
+			}
+		
+	html, body {
+			  height: 100%;
+			  margin: 0;
+			}
+
+	.carousel,
+	.carousel-inner,
+	.carousel-item {
+			  height: 100vh; 
+			}
+
+	.carousel-item img {
+	  width: 100%;
+	  height: 100%;
+	  object-fit: cover;
+	}
+	.custom-container {
+          width: 95%;
+          max-width: none;
+          padding: 0 15px;
+}
+		.carousel-indicators{
+			visibility: hidden
+		}
+		#a {
+			background-color:  #fff9c4
+		}
+		#b {
+			background-color: #fff9c4
+		}
+		.pagination-container {
+         text-align: center;
+         margin-top: 30px;
+        }
+
+		.custom-pagination {
+		  list-style: none;
+		  display: inline-flex;
+		  padding: 0;
+		}
+
+		.custom-pagination li {
+		  margin: 0 5px;
+		  padding: 10px 15px;
+		  background-color: #ddd;
+		  color: black;
+		  border-radius: 50%;
+		  cursor: pointer;
+		  font-weight: bold;
+		  transition: 0.3s;
+		}
+
+		.custom-pagination li.active {
+		  background-color: #f5ea76;
+		  color: white;
+		}
+
+		.custom-pagination li:hover {
+		  background-color: #999;
+		  color: white;
+		}
+		
+  
+        .table-striped tbody tr:nth-of-type(odd) {
+          background-color: #fff9c4; 
+        }
+		
+		/*footer Styles*/
+		
+		 .footer {
+            background-color:#3d6854;
+            color: white;
+            padding: 60px 0 30px;
+            font-size: 0.9rem;
+            margin: 0; /* Ensure no margin */
+        }
+        .footer h5 {
+            color: #4ecdc4;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .footer a:hover {
+            color: #4ecdc4;
+        }
+        .social-icon {
+            font-size: 1.2rem;
+            margin-right: 15px;
+        }
+        .newsletter-input {
+            background: rgba(255,255,255,0.1);
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 30px;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .newsletter-input::placeholder {
+            color: rgba(255,255,255,0.7);
+        }
+        .newsletter-btn {
+            background-color: #4ecdc4;
+            color: #073643;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            width: 100%;
+            transition: all 0.3s;
+        }
+        .newsletter-btn:hover {
+            background-color: #3dbeb5;
+        }
+        .contact-info {
+            margin-bottom: 15px;
+        }
+        .contact-info i {
+            color: #4ecdc4;
+            margin-right: 10px;
+            width: 20px;
+        }
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            margin-top: 40px;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        /* DEMO CONTENT - REMOVE IN PRODUCTION */
+        .demo-content {
+            min-height: 100vh;
+            background: #f8f9fa;
+            padding: 20px;
+        }
+		body{
+			background: #fdfcfc
+			
+			
+		}
+		#main-navbar {
+			position: fixed;
+			top: 45px; /* adjust if your top navbar is taller or shorter */
+			width: 100%;
+			z-index: 1030;
+		  }
+
+	.navbar {
+          background: rgba(255, 255, 255, 0.05); /* transparent white */
+          backdrop-filter: blur(8px); /* optional frosted effect */
+          z-index: 1000;
+          transition: background 0.3s;
+		  
+			}
+		#main-navbar .nav-link {
+        color: white ;
+         }
+
+
+	  </style>
+	<link href="destination.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+  <div class="container-fluid px-1">
+  	      <nav class="navbar navbar-expand-lg navbar-light fixed-top
+ "  style="
+    background-color: #3d6854;
+    padding-top: 4px; 
+    padding-bottom: 4px; 
+    font-size: 13px;
+    color: aliceblue;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-bottom: 1px solid #e8d9b5;">
+		
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+  	      <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+  	        <ul class="navbar-nav mr-auto">
+  	          <li class="nav-item active"> <a class="nav-link" href="#" style="color: aliceblue">&nbsp; Limited-time holiday packages across Sri Lanka - Plan your getaway now!&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="sr-only">(current)</span></a> </li>
+  	          <li class="nav-item active"> <a class="nav-link" href="Home.html" style="color: aliceblue" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Homepage <span class="sr-only">(current)</span></a></li>
+  	          <li class="nav-item"> <a class="nav-link" href="journals.html" style="color: aliceblue">Journal<br>
+  	          </a> </li>
+  	         <li class="nav-item"> <a class="nav-link" href="aboutus.html" style="color: aliceblue" >About Us<br>
+  	          </a></li>
+  	          <li class="nav-item"> <a class="nav-link" href="Contact us.html" style="color: aliceblue" >Contact<br>
+  	          </a></li>
+            </ul>
+  	        <form class="form-inline my-2 my-lg-0">
+            </form>
+          </div>
+    </nav>
+  <nav class="navbar navbar-expand-lg navbar-light bg-transparent position-absolute w-100" 
+     id="main-navbar"
+     style="z-index: 10; color: #92C1D6; top: 40px;">
+ 		<a class="navbar-brand" href="#"><img src="images/logo.jpg" alt="" width="47" height="44" class="img-fluid rounded-circle"/></a>
+  	    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+  	    <div class="collapse navbar-collapse" id="navbarSupportedContent2">
+  	        <ul class="navbar-nav mr-auto">
+				  <li class="nav-item active"> <a class="nav-link" href="Home.html">Home&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="sr-only">(current)</span></a> </li>
+				  <li class="nav-item"> <a class="nav-link" href="Soul of Lanka - Guest House 1.html">Guest Houses&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>
+				  </a> </li>
+				  <li class="nav-item"> <a class="nav-link" href="Key Experience main.html">Key Experience &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</a></li>
+				  <li class="nav-item"> <a class="nav-link" href="Destinations.html">Destinations&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>
+				  </a></li>
+				  <li class="nav-item"> <a class="nav-link" href="Festivals & Culture  .html">Festivals &amp; Culture&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>
+				  </a></li>
+            </ul>
+  	        <form class="form-inline my-2 my-lg-0">
+            </form>
+          </div>
+    </nav>
+    <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel" style="background-color: grey">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators1" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators1" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active"> <img src="images/carousel.png" alt="First slide" width="1920" height="1080" class="d-block mx-auto img-fluid">
+          <div class="carousel-caption top-caption">
+            <h1>Discover the Wonder of Sri Lanka</h1>
+            <p>From misty mountains to golden beaches — every journey begins here.</p>
+          </div>
+        </div>
+        <div class="carousel-item"> <img class="d-block mx-auto" src="images/carousel2.jpg" alt="Second slide">
+          <div class="carousel-caption top-caption ">
+            <h1>Paradise Found</h1>
+            <p>Surf, sun, and serenity — experience the coast like never before.</p>
+          </div>
+        </div>
+        <div class="carousel-item"> <img class="d-block mx-auto" src="images/carousel3.jpg" alt="Third slide">
+          <div class="carousel-caption top-caption ">
+            <h1>Beyond the Guidebooks</h1>
+            <p>Uncover lesser-known villages, waterfalls, and sacred spots.</p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span></a> <a class="carousel-control-next" href="#carouselExampleIndicators1" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span></a></div><br><br>
+  <div class="row">
+      <div class="col-lg-6">
+		  <div class="embed-responsive embed-responsive-4by3">
+			  <br><br><br>
+		  <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1ZOO5Y8nl2hSx6dBXF9dSNzYy4g2p4Wg&ehbc=2E312F" width="600" height="980"></iframe></div>
+	  </div>
+      <div class="col-lg-6">
+        <h4 class="text-center">Diverse Destinations</h4>
+		  <h6 class="text-center" style="font-family:Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, 'serif'">Your ‘Must-See’ Places</h6>
+	    <p class="text-left">With myriad places to visit, Sri Lanka is a little paradise isle full of surprising variety. You can swap the chaos of a city for a tranquil beach in an hour or less, or switch from tropical heat to cool heights and cloud forests for a few more. There are mountains to climb, waves to surf, whales to watch, history to revisit, jungles to explore, even elephants to meet. The destinations in Sri Lanka are wide and varied and we’ll gladly share them with you in the very best way.</p>
+	    <div>
+		  <div id="carouselExampleIndicators2" class="carousel slide mb-5" data-ride="carousel" style="height: 300px; width: 700px" >
+			  <ol class="carousel-indicators" >
+				<li data-target="#carouselExampleIndicators2" data-slide-to="0" class="active"></li>
+				<li data-target="#carouselExampleIndicators2" data-slide-to="1"></li>
+				<li data-target="#carouselExampleIndicators2" data-slide-to="2"></li>
+				<li data-target="#carouselExampleIndicators2" data-slide-to="3"></li>
+			  </ol>
+
+			  <div class="carousel-inner" role="listbox">
+
+				<div class="carousel-item active text-center py-4">
+				  <table class="table table-bordered table-striped w-75 mx-auto bg-white">
+					  <tr >
+						<th style="cursor:pointer;" onclick="location.href='#1'">Kelaniya Rajamaha Viharaya</th>
+						<th style="cursor:pointer;" onclick="location.href='#2'">Colombo National Museum</th>
+						<th style="cursor:pointer;" onclick="location.href='#3'">Dutch Hospital Shopping Precinct</th>
+						<th style="cursor:pointer;" onclick="location.href='#4'">Pahiyangala Caves </th>
+					  </tr>
+
+					  <tr>
+						<th style="cursor:pointer;" onclick="location.href='#5'">Thudugala Ella Waterfall </th>
+						<th style="cursor:pointer;" onclick="location.href='#6'">Sri Dalada Maligawa</th>
+						<th style="cursor:pointer;" onclick="location.href='#7'">Sigiriya</th>
+						<th style="cursor:pointer;" onclick="location.href='#8'">Royal Botanic Gardens, Peradeniya</th>
+					  </tr>
+					  <tr>
+						<th style="cursor:pointer;" onclick="location.href='#9'">Horton Plains National Park</th>
+						<th style="cursor:pointer;" onclick="location.href='destination_page2.html#10'">Nelligala International Buddhist Centre</th>  
+						<th style="cursor:pointer;" onclick="location.href='destination_page2.html#11'">Post Office - Nuwara Eliya</th>
+						<th style="cursor:pointer;" onclick="location.href='destination_page2.html#12'">Hikkaduwa Beach</th>
+					  </tr>
+				  </table>
+				</div>
+
+				<!-- Slide 2 -->
+				<div class="carousel-item text-center py-4">
+				  <table class="table table-bordered table-striped w-75 mx-auto bg-white">
+					
+					  <tr>
+						<th style="cursor:pointer;" onclick="location.href='destination_page2.html#13'">Kalametiya Lagoon Bird Sanctuary and Wetland Park</th>
+						<th style="cursor:pointer;" onclick="location.href='destination_page2.html#14'">Jungle Beach</th>
+						<th style="cursor:pointer;" onclick="location.href='destination_page2.html#15'">Sinharaja Forest Reserve</th>
+						<th style="cursor:pointer;" onclick="location.href='destination_page2.html#16'">Thalpe Beach</th>
+					  </tr>
+
+					  <tr>
+						<th style="cursor:pointer;" onclick="location.href='destination_page2.html#17'">Sea turtle hatchery habaraduwa</th>
+						<th style="cursor:pointer;" onclick="location.href='destination_page2.html#18'">Nagadeepa Temple</th>
+						<th style="cursor:pointer;" onclick="location.href='destination_page2.html#19'">Elephantpass</th>
+						<th style="cursor:pointer;" onclick="location.href='destination_page2.html#20'">Nallur Kandaswamy Devasthanam</th>  
+					  </tr>
+					  <tr>
+						<th style="cursor:pointer;" onclick="location.href='destination_page3.html#21'">Mannar Island</th>
+						<th style="cursor:pointer;" onclick="location.href='destination_page3.html#22'">National Shrine of Our Lady of Madhu</th>
+						<th style="cursor:pointer;" onclick="location.href='destination_page3.html#23'">Nilaveli Beach</th>
+						<th style="cursor:pointer;" onclick="location.href='destination_page3.html#24'">Velgam Vehera Buddhist Temple</th>  
+					  </tr>
+				  </table>
+				</div>
+
+				<!-- Slide 3 -->
+				<div class="carousel-item text-center py-4">
+				  <table class="table table-bordered table-striped w-75 mx-auto bg-white">
+					  <tr>
+						<th style="cursor:pointer;" onclick="location.href='destination_page3.html#25'">Thirukoneswaram Kovil</th>
+						<th style="cursor:pointer;" onclick="location.href='destination_page3.html#26'">Crocodile Lake - Panama</th>
+						<th style="cursor:pointer;" onclick="location.href='destination_page3.html#27'">Ridi Viharaya</th>
+						<th style="cursor:pointer;" onclick="location.href='destination_page3.html#28'">Yapahuwa Rock Fortress</th>  
+					  </tr>
+
+					  <tr>
+						<th style="cursor:pointer;" onclick="location.href='destination_page3.html#29'">Kalpitiya Dutch Church</th>
+						<th style="cursor:pointer;" onclick="location.href='destination_page3.html#30'">Sri Munneswaram Devalaya</th>
+						<th style="cursor:pointer;" onclick="location.href='destination_page3.html#31'">Wilpattu National Park</th>
+						<th style="cursor:pointer;" onclick="location.href='destination_page3.html#32'">Dambulla Royal Temple cave temple</th>
+					  </tr>
+					  <tr>
+						<th style="cursor:pointer;" onclick="location.href='destination_page4.html#33'">Mihintale Raja Maha Viharaya</th>
+						<th style="cursor:pointer;" onclick="location.href='destination_page4.html#34'">Minneriya national park</th>
+						<th style="cursor:pointer;" onclick="location.href='destination_page4.html#35'">Jaya Sri Maha Bodhi</th>
+						<th style="cursor:pointer;" onclick="location.href='destination_page4.html#36'">Bopath Falls</th>
+					  </tr>
+				  </table>
+				
+
+			  </div>
+			  <!-- Slide 4 -->
+				<div class="carousel-item text-center py-4">
+				  <table class="table table-bordered table-striped w-75 mx-auto bg-white">
+					
+					  <tr>
+						<th style="cursor:pointer;" onclick="location.href='destination_page4.html#37'">Makandawa Reserved Forest</th>
+						<th style="cursor:pointer;" onclick="location.href='destination_page4.html#38'">Pinnawala Zoo</th>
+						<th style="cursor:pointer;" onclick="location.href='destination_page4.html#39'">Olu Ella Falls</th>
+						<th style="cursor:pointer;" onclick="location.href='destination_page4.html#40'">Nine Arches Bridge</th>
+					  </tr>
+
+					  <tr>
+						<th style="cursor:pointer;" onclick="location.href='destination_page4.html#41'">Yala National Park</th>
+						<th style="cursor:pointer;" onclick="location.href='destination_page4.html#42'">Dunhinda Waterfall</th>
+						<th style="cursor:pointer;" onclick="location.href='destination_page4.html#43'">Ravana Ella Waterfall</th>
+						<th style="cursor:pointer;" onclick="location.href='destination_page4.html#44'">Lipton’s Seat</th>  
+					  </tr>
+					  
+				  </table>
+				</div>
+			</div>
+
+			  <!-- Carousel Controls -->
+			  <a class="carousel-control-prev" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+				<span id="a" class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			  </a>
+			  <a class="carousel-control-next" href="#carouselExampleIndicators2" role="button" data-slide="next">
+				<span id="b" class="carousel-control-next-icon  " aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			  </a>
+			</div>
+	    </div>
+
+		</div>
+  </div>
+<br><br>
+
+		  
+
+<div class="container my-4">
+  <div class="row">
+    <div class="col-lg-4">
+      <div id="1" class="card">
+        <img src="images/kelaniya.jpg" alt="Card image cap" width="321" height="180" class="card-img-top img-fluid"  style="height: 180px; ">
+        <div class="card-body" >
+          <h5 class="card-title text-center"><strong>Kelaniya Rajamaha Viharaya</strong></h5>
+          <p class="card-text">A sacred Buddhist temple steeped in history and legend, famed for its vibrant murals and serene atmosphere. A must-visit spiritual haven just outside Colombo, offering a peaceful retreat and a glimpse into Sri Lanka’s rich cultural heritage.</p><br>
+          <div class="d-flex justify-content-center gap-2">
+            <a href="Soul of Lanka - Guest House 1.html" class="btn btn-primary" title="View recommended guest houses  Near By">Guest Houses</a>
+            <a href="History & Culture.html" class="btn btn-outline-secondary" title="Find travel agencies">Travel</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4">
+      <div id="2" class="card">
+        <img class="card-img-top img-fluid" src="images/Colombo National Museum.jpg" alt="Card image cap"  style="height: 180px;">
+        <div class="card-body">
+          <h5 class="card-title text-center"><strong>Colombo National Museum</strong></h5>
+          <p class="card-text">Step into Sri Lanka’s past at the island’s largest museum, showcasing priceless artifacts, royal regalia, and ancient art. A captivating journey through history, perfect for culture lovers and curious travelers alike.</p><br>
+          <div class="d-flex justify-content-center gap-2">
+            <a href="Soul of Lanka - Guest House 1.html" class="btn btn-primary" title="View recommended guest houses Near By">Guest Houses</a>
+            <a href="History & Culture.html" class="btn btn-outline-secondary" title="Find travel agencies">Travel</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4">
+      <div id="3" class="card">
+        <img class="card-img-top img-fluid" src="images/Dutch Hospital Shopping Precinct.jpg" alt="Card image cap" style="height: 180px;">
+        <div class="card-body">
+          <h5 class="card-title text-center"><strong>Dutch Hospital Shopping Precinct</strong></h5>
+          <p class="card-text">Experience historic charm meets modern vibes in this beautifully restored colonial complex. Enjoy boutique shopping, trendy cafes, and vibrant nightlife—all set within walls that whisper tales of Sri Lanka’s Dutch heritage.</p>
+          <div class="d-flex justify-content-center gap-2">
+            <a href="Soul of Lanka - Guest House 1.html" class="btn btn-primary" title="View recommended guest houses Near By">Guest Houses</a>
+            <a href="History & Culture.html" class="btn btn-outline-secondary" title="Find travel agencies">Travel</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+	<br>
+<div class="row">
+    <div class="col-lg-4">
+      <div id="4" class="card">
+        <img class="card-img-top img-fluid" src="images/Pahiyangala Caves.jpg" alt="Card image cap" style="height: 180px;">
+        <div class="card-body">
+          <h5 class="card-title"> <strong>Pahiyangala Caves&nbsp;</strong></h5>
+          <p class="card-text">Journey back 37,000 years at one of South Asia’s oldest prehistoric sites. These towering limestone caves, linked to a Chinese monk's legend, offer breathtaking views and a deep dive into Sri Lanka’s ancient human history</p>
+<div class="d-flex justify-content-center gap-2">
+            <a href="Soul of Lanka - Guest House 1.html" class="btn btn-primary" title="View recommended guest houses  Near By">Guest Houses</a>
+            <a href="History & Culture.html" class="btn btn-outline-secondary" title="Find travel agencies">Travel</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4">
+      <div id="5" class="card">
+        <img class="card-img-top img-fluid" src="images/Thudugala Ella Waterfall.jpg" alt="Card image cap" style="height: 180px;">
+        <div class="card-body">
+          <h5 class="card-title"><strong>Thudugala Ella Waterfall</strong></h5>
+          <p class="card-text">A hidden gem nestled in lush jungle, perfect for a refreshing dip and a nature escape. With its natural rock pool and charming forest trail, this waterfall offers serenity just off the beaten path.</p><br>
+<div class="d-flex justify-content-center gap-2">
+            <a href="Soul of Lanka - Guest House 1.html" class="btn btn-primary" title="View recommended guest houses Near By">Guest Houses</a>
+            <a href="waterfalls.html" class="btn btn-outline-secondary" title="Find travel agencies">Travel</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4">
+      <div id="6" class="card">
+        <img class="card-img-top img-fluid" src="images/Sri Dalada Maligawa.jpg" alt="Card image cap"
+			 style="height: 180px;">
+        <div class="card-body">
+          <h5 class="card-title"><strong>Sri Dalada Maligawa</strong></h5>
+          <p class="card-text">Home to the sacred Tooth Relic of the Buddha, this stunning temple in Kandy is a spiritual heart of Sri Lanka. With golden roofs, serene lakeside views, and centuries of devotion, it’s a must-visit cultural treasure.</p>
+          <div class="d-flex justify-content-center gap-2">
+            <a href="Soul of Lanka - Guest House 2.html" class="btn btn-primary" title="View recommended guest houses Near By">Guest Houses</a>
+            <a href="History & Culture.html" class="btn btn-outline-secondary" title="Find travel agencies">Travel</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+	<br>
+<div class="row">
+    <div class="col-lg-4">
+      <div id="7" class="card">
+        <img class="card-img-top img-fluid" src="images/Sigiriya.jpg" alt="Card image cap" style="height: 180px;">
+        <div class="card-body">
+          <h5 class="card-title text-center"><strong>Sigiriya</strong></h5>
+          <p class="card-text">Climb the iconic Lion Rock and uncover an ancient royal fortress in the sky. With stunning frescoes, water gardens, and 360° views, Sigiriya is a masterpiece of history, art, and adventure.</p><br>
+          
+<div class="d-flex justify-content-center gap-2">
+            <a href="Soul of Lanka - Guest House 2.html" class="btn btn-primary" title="View recommended guest houses  Near By">Guest Houses</a>
+            <a href="History & Culture.html" class="btn btn-outline-secondary" title="Find travel agencies">Travel</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4">
+      <div id="8" class="card">
+        <img class="card-img-top img-fluid" src="images/Royal Botanic Gardens, Peradeniya.jpg" alt="Card image cap" style="height: 180px;">
+        <div class="card-body">
+          <h5 class="card-title text-center"><strong>Royal Botanic Gardens, Peradeniya</strong></h5>
+          <p class="card-text">Wander through 147 acres of blooming beauty, exotic palms, and spice-scented trails. Just outside Kandy, this historic garden is a floral paradise perfect for peaceful strolls and nature photography.</p>
+          <div class="d-flex justify-content-center gap-2">
+            <a href="Soul of Lanka - Guest House 1.html" class="btn btn-primary" title="View recommended guest houses Near By">Guest Houses</a>
+            <a href="Nature Walks.html" class="btn btn-outline-secondary" title="Find travel agencies">Travel</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4">
+      <div id="9" class="card">
+        <img class="card-img-top img-fluid" src="images/Horton Plains National Park.jpg" alt="Card image cap" style="height: 180px;">
+        <div class="card-body">
+          <h5 class="card-title text-center"><strong>Horton Plains National Park</strong></h5>
+          <p class="card-text">Trek through misty highlands to reach the dramatic cliff edge of World’s End. With wild sambar deer, cloud forests, and crystal-clear streams, this park is a nature lover’s dream at the top of Sri Lanka.</p><br>
+          
+          <div class="d-flex justify-content-center gap-2">
+            <a href="Soul of Lanka - Guest House 1.html" class="btn btn-primary" title="View recommended guest houses Near By">Guest Houses</a>
+            <a href="Nature Walks.html" class="btn btn-outline-secondary" title="Find travel agencies">Travel</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="pagination-container">
+  <ul class="custom-pagination">
+    
+    <li onclick="location.href='Destinations.html'" class="active">1</li>
+    <li onclick="location.href='destination_page2.html'" >2</li>
+    <li onclick="location.href='destination_page3.html'">3</li>
+    <li onclick="location.href='destination_page4.html'">4</li>
+    <li onclick="location.href='destination_page2.html'">→</li>
+  </ul>
+</div>
+
+<footer class="footer" >
+    <div class="container">
+        <div class="row">
+            <!-- Social Media Column -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <h5>Follow Us</h5>
+                <p style="color: aliceblue">Get inspired by our travel photos and updates</p>
+                <div class="mb-3">
+                    <a href="https://instagram.com/SriLankaTravelExperts" target="_blank" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" target="_blank" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" target="_blank" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" target="_blank" class="social-icon">
+                        <i class="fab fa-pinterest-p"></i>
+                    </a>
+                </div>
+                <p style="color: aliceblue">@SoulOfLanka</p>
+            </div>
+            
+            <!-- About Us Column -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <h5>Quick Navigation Links</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="aboutus.html">About Us</a></li>
+                    <li class="mb-2"><a href="Destinations.html">Destinations</a></li>
+                    <li class="mb-2"><a href="journals.html">Journal</a></li>
+                    <li class="mb-2"><a href="Soul of Lanka - Guest House 1.html">Guest Houses</a></li>
+                    
+                </ul>
+            </div>
+            
+            <!-- Newsletter Column -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5>Get Updates</h5>
+                <p style="color: aliceblue">Subscribe to our newsletter for travel tips and special offers</p>
+                <form>
+                    <input type="email" class="newsletter-input mb-2" placeholder="Your Email Address">
+                    <button type="submit" class="newsletter-btn">SUBSCRIBE</button>
+                </form>
+            </div>
+            
+            <!-- Contact Column -->
+            <div class="col-lg-3 col-md-6">
+                <h5>Contact Us</h5>
+                <div class="contact-info">
+                    <i class="fas fa-phone-alt"></i> +94 76 883 0552
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-envelope"></i> info@souloflanka.com
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-map-marker-alt"></i> 123 Ocean Road, Colombo 03, Sri Lanka
+                </div>
+            </div>
+        </div>
+        
+        <!-- Copyright Row -->
+        <div class="row">
+            <div class="col-12 text-center copyright">
+                <p class="mb-0">© 2025 Soul of Lanka. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+                <p class="mb-0">Website by Team I | NSBM Web</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+  	<!-- body code goes here -->
+
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+	<script src="js/jquery-3.4.1.min.js"></script>
+
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/popper.min.js"></script> 
+  <script src="js/bootstrap-4.4.1.js"></script>
+</div>
+</body>
+</html>

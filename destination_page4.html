@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Destination4</title>
+    <!-- Bootstrap -->
+	<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<style>
+ 	.carousel-caption.top-caption {
+			  top: 50%;
+			  bottom: auto;
+			  transform: translateY(0); 
+			}
+		
+
+	.carousel,
+	.carousel-inner,
+	.carousel-item {
+			  height: 100vh; 
+			}
+
+	.carousel-item img {
+	  width: 100%;
+	  height: 100%;
+	  object-fit: cover;
+	}
+	.custom-container {
+          width: 95%;
+          max-width: none;
+          padding: 0 15px;
+}
+		
+		.pagination-container {
+         text-align: center;
+         margin-top: 30px;
+        }
+
+		.custom-pagination {
+		  list-style: none;
+		  display: inline-flex;
+		  padding: 0;
+		}
+
+		.custom-pagination li {
+		  margin: 0 5px;
+		  padding: 10px 15px;
+		  background-color: #ddd;
+		  color: black;
+		  border-radius: 50%;
+		  cursor: pointer;
+		  font-weight: bold;
+		  transition: 0.3s;
+		}
+
+		.custom-pagination li.active {
+		  background-color: #f5ea76;
+		  color: white;
+		}
+
+		.custom-pagination li:hover {
+		  background-color: #999;
+		  color: white;
+		}
+		body{
+			background: #fdfcfc
+			
+			
+		}
+		  #main-navbar {
+    position: fixed;
+    top: 45px; /* adjust if your top navbar is taller or shorter */
+    width: 100%;
+    z-index: 1030;
+	
+
+		
+  }
+
+	.navbar {
+          background: rgba(255, 255, 255, 0.05); /* transparent white */
+          backdrop-filter: blur(8px); /* optional frosted effect */
+          z-index: 1000;
+          transition: background 0.3s;
+		  
+}
+ .footer {
+            background-color:#3d6854;
+            color: white;
+            padding: 60px 0 30px;
+            font-size: 0.9rem;
+            margin: 0; /* Ensure no margin */
+        }
+		#main-navbar .nav-link {
+        color: white ;
+         }
+        .footer h5 {
+            color: #4ecdc4;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .footer a:hover {
+            color: #4ecdc4;
+        }
+        .social-icon {
+            font-size: 1.2rem;
+            margin-right: 15px;
+        }
+        .newsletter-input {
+            background: rgba(255,255,255,0.1);
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 30px;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .newsletter-input::placeholder {
+            color: rgba(255,255,255,0.7);
+        }
+        .newsletter-btn {
+            background-color: #4ecdc4;
+            color: #073643;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            width: 100%;
+            transition: all 0.3s;
+        }
+        .newsletter-btn:hover {
+            background-color: #3dbeb5;
+        }
+        .contact-info {
+            margin-bottom: 15px;
+        }
+        .contact-info i {
+            color: #4ecdc4;
+            margin-right: 10px;
+            width: 20px;
+        }
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            margin-top: 40px;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        /* DEMO CONTENT - REMOVE IN PRODUCTION */
+        .demo-content {
+            min-height: 100vh;
+            background: #f8f9fa;
+            padding: 20px;
+        }
+
+		
+	  </style>
+	<link href="destination.css" rel="stylesheet" type="text/css">
+  </head>
+<body>
+  <div class="container-fluid px-1">
+  	       <nav class="navbar navbar-expand-lg navbar-light fixed-top
+ "  style="
+    background-color: #3d6854;
+    padding-top: 4px; 
+    padding-bottom: 4px; 
+    font-size: 13px;
+    color: aliceblue
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-bottom: 1px solid #e8d9b5;">
+		
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+  	      <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+  	        <ul class="navbar-nav mr-auto">
+  	          <li class="nav-item active"> <a class="nav-link" href="#" style="color: aliceblue">&nbsp; Limited-time holiday packages across Sri Lanka - Plan your getaway now!&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; <span class="sr-only">(current)</span></a> </li>
+  	          <li class="nav-item active"> <a class="nav-link" href="Home.html" style="color: aliceblue" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Homepage <span class="sr-only">(current)</span></a></li>
+  	          <li class="nav-item"> <a class="nav-link" href="journals.html" style="color: aliceblue">Journal<br>
+  	          </a> </li>
+  	          <li class="nav-item"> <a class="nav-link" href="aboutus.html" style="color: aliceblue" >About Us<br>
+  	          </a></li>
+  	          <li class="nav-item"> <a class="nav-link" href="Contact us.html" style="color: aliceblue" >Contact<br>
+  	          </a></li>
+            </ul>
+  	        <form class="form-inline my-2 my-lg-0">
+            </form>
+          </div>
+    </nav>
+  <nav class="navbar navbar-expand-lg navbar-light bg-transparent position-absolute w-100" 
+     id="main-navbar"
+     style="z-index: 10; color: #92C1D6; top: 40px;">
+ <a class="navbar-brand" href="#"><img src="images/logo.jpg" alt="" width="47" height="44" class="img-fluid rounded-circle"/></a>
+  	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+  	      <div class="collapse navbar-collapse" id="navbarSupportedContent2">
+  	        <ul class="navbar-nav mr-auto">
+  	          <li class="nav-item active"> <a class="nav-link" href="Home.html">Home&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span class="sr-only">(current)</span></a> </li>
+  	          <li class="nav-item"> <a class="nav-link" href="Soul of Lanka - Guest House 1.html">Guest Houses&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>
+  	          </a> </li>
+  	          <li class="nav-item"> <a class="nav-link" href="Key Experience main.html">Key Experience &nbsp; &nbsp; &nbsp;</a></li>
+  	          <li class="nav-item"> <a class="nav-link" href="Destinations.html">Destinations&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>
+  	          </a></li>
+  	          <li class="nav-item"> <a class="nav-link" href="Festivals & Culture  .html">Festivals &amp; Culture&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>
+  	          </a></li>
+            </ul>
+  	        <form class="form-inline my-2 my-lg-0">
+            </form>
+          </div>
+    </nav>
+<div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel" style="background-color: grey">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators1" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators1" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active"> <img src="images/carousel.png" alt="First slide" width="1920" height="1080" class="d-block mx-auto img-fluid">
+          <div class="carousel-caption top-caption">
+            <h1>Discover the Wonder of Sri Lanka</h1>
+            <p>From misty mountains to golden beaches — every journey begins here.</p>
+          </div>
+        </div>
+        <div class="carousel-item"> <img class="d-block mx-auto" src="images/carousel2.jpg" alt="Second slide">
+          <div class="carousel-caption top-caption ">
+            <h1>Paradise Found</h1>
+            <p>Surf, sun, and serenity — experience the coast like never before.</p>
+          </div>
+        </div>
+        <div class="carousel-item"> <img class="d-block mx-auto" src="images/carousel3.jpg" alt="Third slide">
+          <div class="carousel-caption top-caption ">
+            <h1>Beyond the Guidebooks</h1>
+            <p>Uncover lesser-known villages, waterfalls, and sacred spots.</p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span></a> <a class="carousel-control-next" href="#carouselExampleIndicators1" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span></a></div><br><br>
+  
+<div>
+    <h4 class="text-center">Diverse Destinations</h4>
+  <h6 class="text-center" style="font-family:Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, 'serif'">Your ‘Must-See’ Places</h6><br>
+		  <div class="container"><p class="text-justify text-capitalize">With myriad places to visit, Sri Lanka is a little paradise isle full of surprising variety. You can swap the chaos of a city for a tranquil beach in an hour or less, or switch from tropical heat to cool heights and cloud forests for a few more. There are mountains to climb, waves to surf, whales to watch, history to revisit, jungles to explore, even elephants to meet. The destinations in Sri Lanka are wide and varied and we’ll gladly share them with you in the very best way.</p></div>
+	
+	    <div> </div>	
+</div>
+<br><br>
+
+		  
+
+<div class="container my-4">
+  <div class="row">
+    <div class="col-lg-4">
+      <div id="33" class="card">
+        <img src="images/Mihintale Raja Maha Viharaya.jpg" alt="Card image cap" width="275" height="183" class="card-img-top img-fluid"  style="height: 180px; ">
+        <div class="card-body" >
+          <h5 class="card-title text-center"><strong>Mihintale Raja Maha Viharaya</strong></h5>
+          <p class="card-text">The cradle of Buddhism in Sri Lanka, where Emperor Ashoka’s mission first arrived. Features ancient monasteries, stupas, and panoramic hilltop views.</p>
+          
+          <div class="d-flex justify-content-center gap-2">
+            <a href="Soul of Lanka - Guest House 1.html" class="btn btn-primary" title="View recommended guest houses  Near By">Guest Houses</a>
+            <a href="History & Culture.html" class="btn btn-outline-secondary" title="Find travel agencies">Travel</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4">
+      <div id="34" class="card">
+        <img class="card-img-top img-fluid" src="images/Minneriya National Park.jpg" alt="Card image cap"  style="height: 180px;">
+        <div class="card-body">
+          <h5 class="card-title text-center"><strong>Minneriya National Park</strong></h5>
+          <p class="card-text">Renowned for its massive elephant gatherings during the dry season. Visitors can enjoy thrilling safaris to see elephants, birds, and other wildlife.</p>
+          <div class="d-flex justify-content-center gap-2">
+            <a href="Soul of Lanka - Guest House 1.html" class="btn btn-primary" title="View recommended guest houses Near By">Guest Houses</a>
+            <a href="Safari.html" class="btn btn-outline-secondary" title="Find travel agencies">Travel</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4">
+      <div id="35" class="card">
+        <img class="card-img-top img-fluid" src="images/Jaya Sri Maha Bodhi.jpg" alt="Card image cap" style="height: 180px;">
+        <div class="card-body">
+          <h5 class="card-title text-center"><strong>Jaya Sri Maha Bodhi</strong></h5>
+          <p class="card-text">One of the oldest sacred fig trees in the world, located in Anuradhapura. A deeply revered Buddhist pilgrimage site symbolizing enlightenment.</p>
+          
+          <div class="d-flex justify-content-center gap-2">
+            <a href="Soul of Lanka - Guest House 1.html" class="btn btn-primary" title="View recommended guest houses Near By">Guest Houses</a>
+            <a href="History & Culture.html" class="btn btn-outline-secondary" title="Find travel agencies">Travel</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+	<br>
+<div class="row">
+    <div class="col-lg-4">
+      <div id="36" class="card">
+        <img class="card-img-top img-fluid" src="images/Bopath Falls.jpg" alt="Card image cap" style="height: 180px;">
+        <div class="card-body">
+          <h5 class="card-title text-center"><strong> Bopath Falls</strong></h5>
+<p class="card-text">A picturesque waterfall in the shape of a sacred Bo leaf, located in Kuruwita. Easily accessible and surrounded by lush greenery, it’s a popular picnic and bathing spot.</p>
+
+<div class="d-flex justify-content-center gap-2">
+            <a href="Soul of Lanka - Guest House 1.html" class="btn btn-primary" title="View recommended guest houses  Near By">Guest Houses</a>
+            <a href="waterfalls.html" class="btn btn-outline-secondary" title="Find travel agencies">Travel</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4">
+      <div id="37" class="card">
+        <img class="card-img-top img-fluid" src="images/Makandawa Reserved Forest.jpg" alt="Card image cap" style="height: 180px;">
+        <div class="card-body">
+          <h5 class="card-title text-center"><strong>Makandawa Reserved Forest</strong></h5>
+          <p class="card-text">A dense rainforest near Kitulgala, rich in biodiversity and home to rare birds and butterflies. Great for hiking, birdwatching, and exploring unspoiled nature.</p> 
+          <br>
+          
+<div class="d-flex justify-content-center gap-2">
+            <a href="Soul of Lanka - Guest House 1.html" class="btn btn-primary" title="View recommended guest houses Near By">Guest Houses</a>
+            <a href="Nature Walks.html" class="btn btn-outline-secondary" title="Find travel agencies">Travel</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4">
+      <div id="38" class="card">
+        <img class="card-img-top img-fluid" src="images/Pinnawala Zoo.jpg" alt="Card image cap"
+			 style="height: 180px;">
+        <div class="card-body">
+          <h5 class="card-title text-center"><strong>Pinnawala Zoo</strong></h5>
+          <p class="card-text">A small, modern zoo near the famous Elephant Orphanage. Features native wildlife in open enclosures, offering a family-friendly educational experience.</p> 
+          <br>
+          <div class="d-flex justify-content-center gap-2">
+            <a href="Soul of Lanka - Guest House 1.html" class="btn btn-primary" title="View recommended guest houses Near By">Guest Houses</a>
+            <a href="Nature Walks.html" class="btn btn-outline-secondary" title="Find travel agencies">Travel</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+	<br>
+<div class="row">
+    <div class="col-lg-4">
+      <div id="39" class="card">
+        <img class="card-img-top img-fluid" src="images/Olu Ella Falls.jpg" alt="Card image cap" style="height: 180px;">
+        <div class="card-body">
+          <h5 class="card-title text-center"><strong>Olu Ella Falls</strong></h5>
+          <p class="card-text">One of the tallest waterfalls in Sri Lanka, hidden within lush forest near Yatiyanthota. Less crowded and ideal for nature lovers seeking a serene escape.</p><br>
+          
+          
+<div class="d-flex justify-content-center gap-2">
+            <a href="Soul of Lanka - Guest House 1.html" class="btn btn-primary" title="View recommended guest houses  Near By">Guest Houses</a>
+            <a href="waterfalls.html" class="btn btn-outline-secondary" title="Find travel agencies">Travel</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4">
+      <div id="40" class="card">
+        <img class="card-img-top img-fluid" src="images/Nine Arches Bridge.jpg" alt="Card image cap" style="height: 180px;">
+        <div class="card-body">
+          <h5 class="card-title text-center"><strong>Nine Arches Bridge</strong></h5>
+          <p class="card-text">An iconic colonial-era railway bridge in Ella, surrounded by lush hills and tea plantations. A popular spot for photos, especially when trains pass over the arches.</p><br>
+          
+          <div class="d-flex justify-content-center gap-2">
+            <a href="Soul of Lanka - Guest House 1.html" class="btn btn-primary" title="View recommended guest houses Near By">Guest Houses</a>
+            <a href="Nature Walks.html" class="btn btn-outline-secondary" title="Find travel agencies">Travel</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4">
+      <div id="41" class="card">
+        <img class="card-img-top img-fluid" src="images/Yala National Park.jpg" alt="Card image cap" style="height: 180px;">
+        <div class="card-body">
+          <h5 class="card-title text-center"><strong>Yala National Park</strong></h5>
+          <p class="card-text">Sri Lanka’s most visited national park, known for its leopard population, elephants, and coastal lagoons. Offers unforgettable jeep safaris through diverse landscapes.</p>
+         
+          
+          <div class="d-flex justify-content-center gap-2">
+            <a href="Soul of Lanka - Guest House 1.html" class="btn btn-primary" title="View recommended guest houses Near By">Guest Houses</a>
+            <a href="Safari.html" class="btn btn-outline-secondary" title="Find travel agencies">Travel</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<br>
+<div class="row">
+    <div class="col-lg-4">
+      <div id="42" class="card">
+        <img class="card-img-top img-fluid" src="images/Dunhinda Waterfall.jpg" alt="Card image cap" style="height: 180px;">
+        <div class="card-body">
+          <h5 class="card-title text-center"><strong>Dunhinda Waterfall</strong></h5>
+          <p class="card-text">A majestic waterfall near Badulla, cascading through misty forest. Reached by a short scenic hike, it’s one of the most beautiful falls in the country.</p> 
+          <br>
+        
+          
+<div class="d-flex justify-content-center gap-2">
+            <a href="Soul of Lanka - Guest House 1.html" class="btn btn-primary" title="View recommended guest houses  Near By">Guest Houses</a>
+            <a href="waterfalls.html" class="btn btn-outline-secondary" title="Find travel agencies">Travel</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4">
+      <div id="43" class="card">
+        <img class="card-img-top img-fluid" src="images/Ravana Ella Waterfall.jpg" alt="Card image cap" style="height: 180px;">
+        <div class="card-body">
+          <h5 class="card-title text-center"><strong>Ravana Ella Waterfall</strong></h5>
+          <p class="card-text">A dramatic roadside waterfall linked to the legend of King Ravana. Located near Ella, it's easily accessible and a favorite stop for travelers in the hill country.</p><br>
+          <div class="d-flex justify-content-center gap-2">
+            <a href="Soul of Lanka - Guest House 1.html" class="btn btn-primary" title="View recommended guest houses Near By">Guest Houses</a>
+            <a href="waterfalls.html" class="btn btn-outline-secondary" title="Find travel agencies">Travel</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4">
+      <div id="44" class="card">
+        <img class="card-img-top img-fluid" src="images/Lipton’s Seat.jpg" alt="Card image cap" style="height: 180px;">
+        <div class="card-body">
+          <h5 class="card-title text-center"><strong>Lipton’s Seat</strong></h5>
+          <p class="card-text">A scenic viewpoint in Haputale where Sir Thomas Lipton once surveyed his tea empire. Offers breathtaking panoramic views of tea plantations, valleys, and distant mountains.</p>
+          <div class="d-flex justify-content-center gap-2">
+            <a href="Soul of Lanka - Guest House 1.html" class="btn btn-primary" title="View recommended guest houses Near By">Guest Houses</a>
+            <a href="Nature Walks.html" class="btn btn-outline-secondary" title="Find travel agencies">Travel</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="pagination-container">
+  <ul class="custom-pagination">
+    <li onclick="location.href='destination_page3.html'">←</li>
+    <li onclick="location.href='Destinations.html'" >1</li>
+    <li onclick="location.href='destination_page2.html'">2</li>
+    <li onclick="location.href='destination_page3.html'">3</li>
+    <li onclick="location.href='destination_page4.html'" class="active">4</li>
+  </ul>
+</div>
+
+<footer class="footer" >
+    <div class="container">
+        <div class="row">
+            <!-- Social Media Column -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <h5>Follow Us</h5>
+                <p style="color: aliceblue">Get inspired by our travel photos and updates</p>
+                <div class="mb-3">
+                    <a href="https://instagram.com/SriLankaTravelExperts" target="_blank" class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" target="_blank" class="social-icon">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" target="_blank" class="social-icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" target="_blank" class="social-icon">
+                        <i class="fab fa-pinterest-p"></i>
+                    </a>
+                </div>
+                <p style="color: aliceblue">@SoulOfLanka</p>
+            </div>
+            
+            <!-- About Us Column -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <h5>Quick Navigation Links</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="aboutus.html">About Us</a></li>
+                    <li class="mb-2"><a href="Destinations.html">Destinations</a></li>
+                    <li class="mb-2"><a href="journals.html">Journal</a></li>
+                    <li class="mb-2"><a href="Soul of Lanka - Guest House 1.html">Guest Houses</a></li>
+                    
+                </ul>
+            </div>
+            
+            <!-- Newsletter Column -->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5>Get Updates</h5>
+                <p style="color: aliceblue">Subscribe to our newsletter for travel tips and special offers</p>
+                <form>
+                    <input type="email" class="newsletter-input mb-2" placeholder="Your Email Address">
+                    <button type="submit" class="newsletter-btn">SUBSCRIBE</button>
+                </form>
+            </div>
+            
+            <!-- Contact Column -->
+            <div class="col-lg-3 col-md-6">
+                <h5>Contact Us</h5>
+                <div class="contact-info">
+                    <i class="fas fa-phone-alt"></i> +94 76 883 0552
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-envelope"></i> info@souloflanka.com
+                </div>
+                <div class="contact-info">
+                    <i class="fas fa-map-marker-alt"></i> 123 Ocean Road, Colombo 03, Sri Lanka
+                </div>
+            </div>
+        </div>
+        
+        <!-- Copyright Row -->
+        <div class="row">
+            <div class="col-12 text-center copyright">
+                <p class="mb-0">© 2025 Soul of Lanka. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+                <p class="mb-0">Website by Team I | NSBM Web</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+  	<!-- body code goes here -->
+
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+	<script src="js/jquery-3.4.1.min.js"></script>
+
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/popper.min.js"></script> 
+  <script src="js/bootstrap-4.4.1.js"></script>
+</div>	  
+</body>
+</html>
